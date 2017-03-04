@@ -12,3 +12,19 @@
 
 </body>
 </html>
+<script>
+
+var test=new Rticket.ticket([1,2,3,4,6,7,8,12,13,14])
+console.log("验证连续数2",test.checkIsContinuum(2))
+console.log("验证连续数3",test.checkIsContinuum(3))
+console.log("验证连续数4",test.checkIsContinuum(4))
+console.log("验证连续数5",test.checkIsContinuum(5))
+console.log("验证是否出现",test.checkParagraph([
+	{paragraphLength:2,paragraphNums:[1,5,10],isInclude:true},
+	{paragraphLength:4,paragraphNums:[2,4,8],isInclude:true},
+	{paragraphLength:1,paragraphNums:[3,5,6],isInclude:false},
+]))
+
+
+
+</script>
