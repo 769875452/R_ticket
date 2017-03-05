@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="radio-numbers">
-	<div class="checkNumbes"> 筛选数量</div>
+	<div class="check-title"> 筛选数量</div>
 	<label class="radio-inline">
 		<input type="radio" name="checkNumers" value="5"> 36选5
 	</label>
@@ -27,21 +27,32 @@
 </div>
 
 <div class="checkbox-not-in-numbers">
+	<div class="check-title">排除数字</div>
 </div>
 <div class="radio-inline-continuity">
+	<div class="check-title">连号删除</div>
 </div>
 <div class="checkbox-not-odd">
+	<div class="check-title">奇偶数删除</div>
 	<label class="radio-inline">
-		<input type="radio" name="oddOrEven" value="odd"> 奇数删除
+		<input type="radio" name="oddRadio" value="odd"> 奇数删除
 	</label>
 </div>
 <div class="checkbox-not-even">
 	<label class="radio-inline">
-		<input type="radio" name="oddOrEven" value="even"> 偶数删除
+		<input type="radio" name="evenRadio" value="even"> 偶数删除
 	</label>
 </div>
 
 <div class="checkbox-not-last">
+	<div class="check-title">尾数筛选</div>
+	<label class="radio-inline">
+		<input type="radio" name="lastNumber" value="even"> 尾数筛选
+	</label>
+</div>
+
+<div class="">
+	<div class="check-title">分段筛选</div>
 	<label class="radio-inline">
 		<input type="radio" name="lastNumber" value="even"> 尾数筛选
 	</label>
@@ -57,34 +68,43 @@
 <script>
 
 
-	for(var i=0;i<=37;i++){
+	for(let i=1;i<=37;i++){
 		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
 				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
 				'</label>');
 	}
 	$(".check-start").click(function(){
-		handleCheckStart()
+		handleCheckStart();
 	})
-
-
-
-
-
-
-
-
 
 	for(var i=2;i<=6;i++){
 		$(".radio-inline-continuity").append('<label class="radio-inline"> ' +
-				'<input type="radio" name="checkNumers" value="'+i+'"> '+i+'连号删除 ' +
+				'<input type="radio" name="checkNumbers" value="'+i+'"> '+i+'连号删除 ' +
 				'</label>')
 	}
 	for(var i=1;i<=7;i++){
-		var numberDiv='<label class="checkbox-inline"> ' +
-				'<input type="checkbox" id="not-in-numbers-'+i+'" value="'+i+'">  ' +i+
+		var oddNumberDiv='<label class="checkbox-inline"> ' +
+				'<input type="radio" name="oddNumbres" value="'+i+'">  ' +i+
 				'</label>';
-		$(".checkbox-not-odd").append(numberDiv);
-		$(".checkbox-not-even").append(numberDiv);
+		$(".checkbox-not-odd").append(oddNumberDiv);
+		var evenNumberDiv='<label class="checkbox-inline"> ' +
+				'<input type="radio" name="evenNumbres" value="'+i+'">  ' +i+
+				'</label>';
+		$(".checkbox-not-even").append(evenNumberDiv);
+	}
+	$(".checkbox-not-last").append("<br>");
+	for(var i=1;i<=3;i++){
+		let notInNumsGroupDiv='<label class="checkbox-inline"> ' +
+				'<input type="checkbox" name="notInGroup" value="'+i+'">  尾数' +i+
+				'相同</label>';
+		$(".checkbox-not-last").append(notInNumsGroupDiv);
+		for(var j=1;j<=7;j++){
+			let notInNumsCheckbox='<label class="checkbox-inline"> ' +
+					'<input type="checkbox" name="notInNums_'+i+'" value="'+j+'">  ' +j+
+					'</label>';
+			$(".checkbox-not-last").append(notInNumsCheckbox);
+		}
+		$(".checkbox-not-last").append("<br>");
 	}
 
 </script>

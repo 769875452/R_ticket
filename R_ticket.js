@@ -21,7 +21,7 @@
 						count++;
 					}
 				}
-				if (count>oddLength) {
+				if (count>=oddLength) {
 					return false;
 				}
 				return true;
@@ -36,7 +36,7 @@
 						count++;
 					}
 				}
-				if (count>evenLength) {
+				if (count>=evenLength) {
 					return false;
 				}
 				return true;
@@ -113,6 +113,25 @@
 				}
 				return true;
 			}
+			this.checkLastNumber=function(sameLength,checkNumsArr){
+				let numsArrLength=this.numsArr.length;
+				let checkNumsArrLength=checkNumsArr.length;
+				for(let j=0;j<checkNumsArrLength;j++){
+					let thisCheckNumsLength=0;
+					for(let i=0;i<numsArrLength;i++){
+						if(this.numsArr[i]%10==checkNumsArr[j]){
+							thisCheckNumsLength++;
+							if(thisCheckNumsLength>=sameLength){
+								return false;
+							}
+						}
+					}
+				}
+				return true
+			}
+
+
+
 		}
 		
 	}(Rticket)
