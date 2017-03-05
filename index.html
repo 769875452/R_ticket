@@ -4,27 +4,88 @@
 <!DOCTYPE html>
 <html lang="zh-CN" class="work">
 <head>
-    <meta charset="utf-8">
-	
-    <script src="./R_ticket.js"></script>
+	<meta charset="utf-8">
+
+
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script src="./R_ticket.js"></script>
 </head>
 <body>
+<div class="radio-numbers">
+	<div class="checkNumbes"> 筛选数量</div>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="5"> 36选5
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="6"> 36选6
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="7"> 36选7
+	</label>
+</div>
+
+<div class="checkbox-not-in-numbers">
+</div>
+<div class="radio-inline-continuity">
+</div>
+<div class="checkbox-not-odd">
+	<label class="radio-inline">
+		<input type="radio" name="oddOrEven" value="odd"> 奇数删除
+	</label>
+</div>
+<div class="checkbox-not-even">
+	<label class="radio-inline">
+		<input type="radio" name="oddOrEven" value="even"> 偶数删除
+	</label>
+</div>
+
+<div class="checkbox-not-last">
+	<label class="radio-inline">
+		<input type="radio" name="lastNumber" value="even"> 尾数筛选
+	</label>
+</div>
+
+<div class="check-start">
+	开始
+</div>
+<div id="result">0</div>
 
 </body>
 </html>
 <script>
 
-var test=new Rticket.ticket([1,2,3,4,6,7,8,12,13,14])
-console.log("验证连续数2",test.checkIsContinuum(2))
-console.log("验证连续数3",test.checkIsContinuum(3))
-console.log("验证连续数4",test.checkIsContinuum(4))
-console.log("验证连续数5",test.checkIsContinuum(5))
-console.log("验证是否出现",test.checkParagraph([
-	{paragraphLength:2,paragraphNums:[1,5,10],isInclude:true},
-	{paragraphLength:4,paragraphNums:[2,4,8],isInclude:true},
-	{paragraphLength:1,paragraphNums:[3,5,6],isInclude:false},
-]))
+
+	for(var i=0;i<=37;i++){
+		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
+				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
+				'</label>');
+	}
+	$(".check-start").click(function(){
+		handleCheckStart()
+	})
 
 
+
+
+
+
+
+
+
+	for(var i=2;i<=6;i++){
+		$(".radio-inline-continuity").append('<label class="radio-inline"> ' +
+				'<input type="radio" name="checkNumers" value="'+i+'"> '+i+'连号删除 ' +
+				'</label>')
+	}
+	for(var i=1;i<=7;i++){
+		var numberDiv='<label class="checkbox-inline"> ' +
+				'<input type="checkbox" id="not-in-numbers-'+i+'" value="'+i+'">  ' +i+
+				'</label>';
+		$(".checkbox-not-odd").append(numberDiv);
+		$(".checkbox-not-even").append(numberDiv);
+	}
 
 </script>
+<script type="text/javascript" src="./index.js"></script>
