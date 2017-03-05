@@ -47,14 +47,14 @@
 <div class="checkbox-not-last">
 	<div class="check-title">尾数筛选</div>
 	<label class="radio-inline">
-		<input type="radio" name="lastNumber" value="even"> 尾数筛选
+		<input type="radio" name="lastNumber" value="last"> 尾数筛选
 	</label>
 </div>
 
-<div class="">
+<div class="checkbox-paragraph">
 	<div class="check-title">分段筛选</div>
 	<label class="radio-inline">
-		<input type="radio" name="lastNumber" value="even"> 尾数筛选
+		<input type="radio" name="paragraph" value="paragraph"> 分段筛选
 	</label>
 </div>
 
@@ -106,6 +106,26 @@
 		}
 		$(".checkbox-not-last").append("<br>");
 	}
+
+	$(".checkbox-paragraph").append("<br>");
+	for(var i=0;i<=3;i++){
+		let paragraphGroupDiv='<label class="checkbox-inline"> ' +
+				'<input type="checkbox" name="paragraphGroup" value="'+i+'">  ' +(10*i+1)+'-'+(10*(i+1))+'含有号码'+
+				'</label>';
+		$(".checkbox-paragraph").append(paragraphGroupDiv);
+		for(var j=0;j<=10;j++){
+			if((i*10+j)>37){
+				break;
+			}
+			let paragraphNumsCheckbox='<label class="checkbox-inline"> ' +
+					'<input type="radio" name="paragraphNums_'+i+'" value="'+j+'">  ' +j+
+					'</label>';
+			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
+		}
+		$(".checkbox-paragraph").append("<br>");
+	}
+
+
 
 </script>
 <script type="text/javascript" src="./index.js"></script>

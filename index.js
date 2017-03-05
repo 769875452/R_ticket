@@ -33,22 +33,35 @@ handleCheckStart=()=>{
         //if($("input[name='checkNumers']:checked").val()){
         //    isValid=test.checkIsContinuum();
         //}
+        //奇数排除
         if($("input[name='oddRadio']:checked").val() && isValid){
             isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
 
         }
+        //偶数
         if($("input[name='evenRadio']:checked").val()  && isValid){
             isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
         }
+        //尾数筛选
         if(isValid){
             $('input[name="notInGroup"]:checked').each(function(){
-
                 let sameLength=parseInt($(this).val());
                 let checkNumsArr=[];
                 $('input[name="notInNums_'+sameLength+'"]:checked').each(function(){
                     checkNumsArr.push(parseInt($(this).val()))
                 })
                 isValid=test.checkLastNumber(sameLength,checkNumsArr)
+                if(!isValid){
+                    return false;
+                }
+            })
+        }
+
+        if(isValid){
+            $('input[name="paragraphGroup"]:checked').each(function(){
+                let startValue=parseInt($(this).val());
+                let paragraphLength=parseInt($('input[name="paragraphNums_'+startValue+'"]:checked').val());
+                isValid=test.checkContinuumParagraph(startValue,paragraphLength);
                 if(!isValid){
                     return false;
                 }

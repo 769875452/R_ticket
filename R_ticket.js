@@ -74,20 +74,35 @@
 				}
 				return true;
 			}
-			
+
+			//{startNum,continumLength}
+			this.checkContinuumParagraph=function(startNum,continumLength){
+				var count=0;
+				let start=startNum*10+1;
+				let end=(startNum+1)*10;
+				let numsArrLength=this.numsArr.length;
+				for(var i=0;i<numsArrLength;i++){
+					if(this.numsArr[i]<=end && this.numsArr[i]>=start){
+						count++;
+						if(count>=continumLength){
+							return false;
+						}
+					}
+				}
+				return true;
+			}
+
 			//传入一个数组，数组内有如下格式的段落对象
-		
 			//段落对象有3个属性 检查的个数(paragraphLength)，检查的数字数组(paragraphNums),排除还是包含(isInclude:boolean)
 			//isSame为在数组里是出现或非出现
 			//paragraphLength为段落长度，
 			//当出现或非出现的个数大于等于段落长度时返回false
 			//否则返回true
 			//整体数组之间的关系为&&（有一个为false，则直接返回false）
-			
-			
+
+
 			this.checkParagraph=function(paragraphArr){
 				for(let paragraph of paragraphArr){
-					console.log(paragraph)
 					var count=0;
 					let numsArrLength=this.numsArr.length;
 					let paragraphNumsLength=paragraph.paragraphNums.length;
