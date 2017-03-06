@@ -34,28 +34,30 @@
 </div>
 <div class="checkbox-not-odd">
 	<div class="check-title">奇偶数删除</div>
-	<label class="radio-inline">
-		<input type="radio" name="oddRadio" value="odd"> 奇数删除
-	</label>
 </div>
 <div class="checkbox-not-even">
-	<label class="radio-inline">
-		<input type="radio" name="evenRadio" value="even"> 偶数删除
-	</label>
 </div>
 
 <div class="checkbox-not-last">
 	<div class="check-title">尾数筛选</div>
-	<label class="radio-inline">
-		<input type="radio" name="lastNumber" value="last"> 尾数筛选
-	</label>
 </div>
 
 <div class="checkbox-paragraph">
 	<div class="check-title">分段筛选</div>
-	<label class="radio-inline">
-		<input type="radio" name="paragraph" value="paragraph"> 分段筛选
-	</label>
+</div>
+
+<div class="checkbox-sum">
+	<div class="check-title">和值筛选</div>
+
+	<div class="form-group">
+		<label for="largerThan">大于</label>
+		<input type="text" class="form-control" id="largerThan" placeholder="请输入">
+	</div>
+
+	<div class="form-group">
+		<label for="smallerThan">小于</label>
+		<input type="text" class="form-control" id="smallerThan" placeholder="请输入">
+	</div>
 </div>
 
 <div class="check-start">
@@ -92,25 +94,23 @@
 				'</label>';
 		$(".checkbox-not-even").append(evenNumberDiv);
 	}
-	$(".checkbox-not-last").append("<br>");
 	for(var i=1;i<=3;i++){
 		let notInNumsGroupDiv='<label class="checkbox-inline"> ' +
-				'<input type="checkbox" name="notInGroup" value="'+i+'">  尾数' +i+
-				'相同</label>';
+				'尾数' +i+
+				'个相同</label>';
 		$(".checkbox-not-last").append(notInNumsGroupDiv);
-		for(var j=1;j<=7;j++){
+		for(var j=0;j<=9;j++){
 			let notInNumsCheckbox='<label class="checkbox-inline"> ' +
-					'<input type="checkbox" name="notInNums_'+i+'" value="'+j+'">  ' +j+
+					'<input class="notInNums" type="checkbox" name="notInNums_'+i+'" value="'+i+'-'+j+'">  ' +j+
 					'</label>';
 			$(".checkbox-not-last").append(notInNumsCheckbox);
 		}
 		$(".checkbox-not-last").append("<br>");
 	}
 
-	$(".checkbox-paragraph").append("<br>");
 	for(var i=0;i<=3;i++){
 		let paragraphGroupDiv='<label class="checkbox-inline"> ' +
-				'<input type="checkbox" name="paragraphGroup" value="'+i+'">  ' +(10*i+1)+'-'+(10*(i+1))+'含有号码'+
+				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码'+
 				'</label>';
 		$(".checkbox-paragraph").append(paragraphGroupDiv);
 		for(var j=0;j<=10;j++){
@@ -118,7 +118,7 @@
 				break;
 			}
 			let paragraphNumsCheckbox='<label class="checkbox-inline"> ' +
-					'<input type="radio" name="paragraphNums_'+i+'" value="'+j+'">  ' +j+
+					'<input type="radio" class="check-paragraph" name="paragraphNums_'+i+'" value="'+i+'-'+j+'">  ' +j+
 					'</label>';
 			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
 		}
