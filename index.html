@@ -16,8 +16,8 @@
 	<script src="./R_ticket.js"></script>
 </head>
 <body>
+<div class="check-title"> 筛选数量(不选的话默认为5)</div>
 <div class="radio-numbers">
-	<div class="check-title"> 筛选数量</div>
 	<label class="radio-inline">
 		<input type="radio" name="checkNumers" value="5"> 36选5
 	</label>
@@ -29,18 +29,18 @@
 	</label>
 </div>
 
+<div class="check-title">排除数字</div>
 <div class="checkbox-not-in-numbers">
-	<div class="check-title">排除数字</div>
 </div>
+<div class="check-title">连号删除</div>
 <div class="radio-inline-continuity">
-	<div class="check-title">连号删除</div>
 </div>
 <div class="check-title">奇偶数排除(超出个数则排除)</div>
 <div class="checkbox-not-odd">
-	奇数(个):
+	<div class="select-row small">奇数(个):</div>
 </div>
 <div class="checkbox-not-even">
-	偶数(个):
+	<div class="select-row small">偶数(个):</div>
 </div>
 
 <div class="checkbox-not-last">
@@ -54,19 +54,19 @@
 <div class="checkbox-sum">
 	<div class="check-title">和值筛选</div>
 
-	<div class="form-group">
-		<label for="largerThan">大于</label>
+	<div class="form-group flex-group">
+		<label class="flex-group-title" for="largerThan">大于</label>
 		<input type="text" class="form-control" id="largerThan" placeholder="请输入">
 	</div>
 
-	<div class="form-group">
-		<label for="smallerThan">小于</label>
+	<div class="form-group flex-group">
+		<label class="flex-group-title" for="smallerThan">小于</label>
 		<input type="text" class="form-control" id="smallerThan" placeholder="请输入">
 	</div>
 </div>
 
 
-<button type="button" class="check-start btn btn-primary btn-lg">
+<button type="button" class="check-start btn btn-primary btn-default">
 	筛选结果
 </button>
 
@@ -98,7 +98,7 @@
 
 
 
-<a class="download-a" download="结果.csv">下载</a>
+<a class="download-a" download="结果.csv"></a>
 
 
 </body>
@@ -146,11 +146,11 @@
 
 	//奇偶数删除
 	for(var i=1;i<=7;i++){
-		var oddNumberDiv='<label class="checkbox-inline"> ' +
+		var oddNumberDiv='<label class="radio-inline"> ' +
 				'<input type="radio" name="oddNumbres" value="'+i+'">  ' +i+
 				'</label>';
 		$(".checkbox-not-odd").append(oddNumberDiv);
-		var evenNumberDiv='<label class="checkbox-inline"> ' +
+		var evenNumberDiv='<label class="radio-inline"> ' +
 				'<input type="radio" name="evenNumbres" value="'+i+'">  ' +i+
 				'</label>';
 		$(".checkbox-not-even").append(evenNumberDiv);
@@ -158,7 +158,7 @@
 
 	//尾数筛选
 	for(var i=1;i<=3;i++){
-		let notInNumsGroupDiv='<label class="checkbox-inline"> ' +
+		let notInNumsGroupDiv='<div class="select-row"> ' +
 				'尾数有' +i+
 				'个(选择数)的排除</label>';
 		$(".checkbox-not-last").append(notInNumsGroupDiv);
@@ -173,7 +173,7 @@
 
 	//分段筛选
 	for(var i=0;i<=3;i++){
-		let paragraphGroupDiv='<label class="checkbox-inline"> ' +
+		let paragraphGroupDiv='<label class="checkbox-inline select-row"> ' +
 				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码(个)的排除'+
 				'</label>';
 		$(".checkbox-paragraph").append(paragraphGroupDiv);
@@ -181,7 +181,7 @@
 			if((i*10+j)>37){
 				break;
 			}
-			let paragraphNumsCheckbox='<label class="checkbox-inline"> ' +
+			let paragraphNumsCheckbox='<label class="radio-inline"> ' +
 					'<input type="radio" class="check-paragraph" name="paragraphNums_'+i+'" value="'+i+'-'+j+'">  ' +j+
 					'</label>';
 			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
