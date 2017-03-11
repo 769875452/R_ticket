@@ -82,7 +82,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">筛选结果</h4>
+				<h4 class="modal-title">筛选结果(为保证效率,最大显示1000条数据,当前有<span id="numsLength"></span>条)</h4>
 			</div>
 			<div class="modal-body modal-result">
 				<table class="result-table table table-bordered table-hover table-condensed table-striped">
@@ -121,7 +121,9 @@
 	$(".check-start").click(function(){
 		$("#numsResult").modal();
 		$(".result-table").html("");
+		validNumsArr=[];
 		handleCheckStart();
+		$("#numsLength").html(validNumsArr.length);
 		validNumsArr.forEach((result)=>{
 			let tr=$('<tr></tr>').appendTo(".result-table");
 			result.forEach((td)=>{
@@ -131,7 +133,7 @@
 	})
 
 	//排除数字
-	for(let i=1;i<=37;i++){
+	for(let i=1;i<37;i++){
 		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
 				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
 				'</label>');
@@ -177,7 +179,7 @@
 				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码(个)的排除'+
 				'</label>';
 		$(".checkbox-paragraph").append(paragraphGroupDiv);
-		for(var j=0;j<=7;j++){
+		for(var j=1;j<=7;j++){
 			if((i*10+j)>37){
 				break;
 			}
@@ -190,13 +192,15 @@
 	}
 
 
+	var valueMap={};
 	$("input").click(function(e){
-		console.log($(this).attr("data-ischecked"))
-		if($(this).attr("data-ischecked") && $(this).attr("data-ischecked")=="true"){
-			$(this).attr("data-ischecked","false")
+		let name=$(this).attr("name");
+		let value=valueMap[name];
+		if(value==$(this).val()){
+			delete valueMap[name];
 			$(this)[0].checked=false
 		}else{
-			$(this).attr("data-ischecked","true")
+			valueMap[name]=$(this).val()
 			$(this)[0].checked=true
 		}
 		$(this).attr("data-ischecked")

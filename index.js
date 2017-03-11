@@ -2,11 +2,12 @@ var checkNumsLength=0;
 var allNums=[];
 var test=new Rticket.ticket();
 var validNumsArr=[];
+
 handleCheckStart=()=>{
     allNums=[];
     checkNumsLength=$("input[name='checkNumers']:checked").val() || 5;
 
-    for(let i=1;i<=37;i++){
+    for(let i=1;i<37;i++){
         allNums.push(i);
     }
     $('input[name="notInNums"]:checked').each(function(){
@@ -18,8 +19,6 @@ handleCheckStart=()=>{
             }
         }
     });
-    console.log("select nums:",allNums)
-    console.log("select numsLength:",checkNumsLength);
 
     let allNumsLength=allNums.length;
     let numsArr=[];
@@ -29,10 +28,11 @@ handleCheckStart=()=>{
     while(true){
         let isValid=checkBySelect(numsArr);
         if(isValid) {
+            console.log(numsArr)
             validNumsArr.push(numsArr.concat([]))
         }
         numsArr=handleAddNumByIndex(numsArr,(checkNumsLength-1))
-        if(!numsArr || validNumsArr.length>1000){
+        if(!numsArr || validNumsArr.length>=1000){
             break;
         }
     }
