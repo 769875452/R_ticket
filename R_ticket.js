@@ -69,6 +69,30 @@
 							return false;
 						}
 					}else{
+						count=1;
+						break;
+					}
+				}
+				return true;
+			}
+			this.checkIsAnyContinuum=function(continuumLength,anys){
+				var count=1;
+				var continumCount=1;
+				let numsArrLength=this.numsArr.length
+				for(var i=1;i<numsArrLength;i++){
+					if(this.numsArr[numsArrLength-i]-this.numsArr[numsArrLength-(i+1)]==1){
+						if(count!=0){
+							count++;
+							if(count>=continuumLength){
+								continumCount++;
+								count=0;
+								if(continumCount>=anys){
+									return false;
+								}
+							}
+						}
+					}else{
+						count=1;
 						break;
 					}
 				}

@@ -3,12 +3,15 @@
 
 <!DOCTYPE html>
 <html lang="zh-CN" class="work">
-<head>
 	<meta charset="utf-8">
 
 
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<link href="./bootstrap.css" rel="stylesheet">
+
+	<link href="./index.css" rel="stylesheet">
+
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
 
 	<script src="./R_ticket.js"></script>
 </head>
@@ -32,10 +35,12 @@
 <div class="radio-inline-continuity">
 	<div class="check-title">连号删除</div>
 </div>
+<div class="check-title">奇偶数排除(超出个数则排除)</div>
 <div class="checkbox-not-odd">
-	<div class="check-title">奇偶数删除</div>
+	奇数(个):
 </div>
 <div class="checkbox-not-even">
+	偶数(个):
 </div>
 
 <div class="checkbox-not-last">
@@ -60,30 +65,86 @@
 	</div>
 </div>
 
-<div class="check-start">
-	开始
-</div>
-<div id="result">0</div>
+
+<button type="button" class="check-start btn btn-primary btn-lg">
+	筛选结果
+</button>
+
+
+
+
+
+
+
+
+<div class="modal fade" tabindex="-1" id="numsResult" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">筛选结果</h4>
+			</div>
+			<div class="modal-body modal-result">
+				<table class="result-table table table-bordered table-hover table-condensed table-striped">
+				</table>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">继续筛选</button>
+				<button type="button" class="btn btn-primary result-get-csv">导出结果</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<a class="download-a" download="结果.csv">下载</a>
+
 
 </body>
 </html>
 <script>
 
+	$(".result-get-csv").click(function(e){
+		var str=","+validNumsArr.map((result)=>{
+			return result.map((num)=>{
+				console.log(num)
+				return num+"";
+			})+"\n";
+		})
+		str=encodeURIComponent(str);
+		$(".download-a").attr("href","data:text/csv;charset=utf-8,\ufeff"+str);
+		$(".download-a")[0].click();
+	})
 
+
+	$(".check-start").click(function(){
+		$("#numsResult").modal();
+		$(".result-table").html("");
+		handleCheckStart();
+		validNumsArr.forEach((result)=>{
+			let tr=$('<tr></tr>').appendTo(".result-table");
+			result.forEach((td)=>{
+				tr.append('<td>'+td+'</td>')
+			})
+		});
+	})
+
+	//排除数字
 	for(let i=1;i<=37;i++){
 		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
 				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
 				'</label>');
 	}
-	$(".check-start").click(function(){
-		handleCheckStart();
-	})
 
+	//连号删除
 	for(var i=2;i<=6;i++){
 		$(".radio-inline-continuity").append('<label class="radio-inline"> ' +
 				'<input type="radio" name="checkNumbers" value="'+i+'"> '+i+'连号删除 ' +
 				'</label>')
 	}
+
+	//奇偶数删除
 	for(var i=1;i<=7;i++){
 		var oddNumberDiv='<label class="checkbox-inline"> ' +
 				'<input type="radio" name="oddNumbres" value="'+i+'">  ' +i+
@@ -94,10 +155,12 @@
 				'</label>';
 		$(".checkbox-not-even").append(evenNumberDiv);
 	}
+
+	//尾数筛选
 	for(var i=1;i<=3;i++){
 		let notInNumsGroupDiv='<label class="checkbox-inline"> ' +
-				'尾数' +i+
-				'个相同</label>';
+				'尾数有' +i+
+				'个(选择数)的排除</label>';
 		$(".checkbox-not-last").append(notInNumsGroupDiv);
 		for(var j=0;j<=9;j++){
 			let notInNumsCheckbox='<label class="checkbox-inline"> ' +
@@ -108,12 +171,13 @@
 		$(".checkbox-not-last").append("<br>");
 	}
 
+	//分段筛选
 	for(var i=0;i<=3;i++){
 		let paragraphGroupDiv='<label class="checkbox-inline"> ' +
-				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码'+
+				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码(个)的排除'+
 				'</label>';
 		$(".checkbox-paragraph").append(paragraphGroupDiv);
-		for(var j=0;j<=10;j++){
+		for(var j=0;j<=7;j++){
 			if((i*10+j)>37){
 				break;
 			}
@@ -125,6 +189,18 @@
 		$(".checkbox-paragraph").append("<br>");
 	}
 
+
+	$("input").click(function(e){
+		console.log($(this).attr("data-ischecked"))
+		if($(this).attr("data-ischecked") && $(this).attr("data-ischecked")=="true"){
+			$(this).attr("data-ischecked","false")
+			$(this)[0].checked=false
+		}else{
+			$(this).attr("data-ischecked","true")
+			$(this)[0].checked=true
+		}
+		$(this).attr("data-ischecked")
+	})
 
 
 </script>
