@@ -59,25 +59,9 @@
 			//传入一个连续的数值continuumLength
 			//当该数组最后几位数为连续的数且，连续的数量大于等于continuumLength，返回false
 			//否则返回true
-			this.checkIsContinuum=function(continuumLength){
+			this.checkIsAnyContinuum=function(continuumLength,anys=1){
 				var count=1;
-				let numsArrLength=this.numsArr.length
-				for(var i=1;i<numsArrLength;i++){
-					if(this.numsArr[numsArrLength-i]-this.numsArr[numsArrLength-(i+1)]==1){
-						count++;						
-						if(count>=continuumLength){
-							return false;
-						}
-					}else{
-						count=1;
-						break;
-					}
-				}
-				return true;
-			}
-			this.checkIsAnyContinuum=function(continuumLength,anys){
-				var count=1;
-				var continumCount=1;
+				var continumCount=0;
 				let numsArrLength=this.numsArr.length
 				for(var i=1;i<numsArrLength;i++){
 					if(this.numsArr[numsArrLength-i]-this.numsArr[numsArrLength-(i+1)]==1){
@@ -93,7 +77,6 @@
 						}
 					}else{
 						count=1;
-						break;
 					}
 				}
 				return true;

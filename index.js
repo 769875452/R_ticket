@@ -28,7 +28,6 @@ handleCheckStart=()=>{
     while(true){
         let isValid=checkBySelect(numsArr);
         if(isValid) {
-            console.log(numsArr)
             validNumsArr.push(numsArr.concat([]))
         }
         numsArr=handleAddNumByIndex(numsArr,(checkNumsLength-1))
@@ -42,9 +41,6 @@ checkBySelect=(numsArr)=>{
     test.setNumsArr(numsArr)
 
     let isValid=true;
-    //if($("input[name='checkNumers']:checked").val()){
-    //    isValid=test.checkIsContinuum();
-    //}
     //ÆæÊýÅÅ³ý
     if(isValid && $("input[name='oddNumbres']:checked").val()){
         isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
@@ -53,6 +49,15 @@ checkBySelect=(numsArr)=>{
     if(isValid && $("input[name='evenNumbres']:checked").val()){
         isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
     }
+    //Á¬ºÅÉ¾³ý
+    if(isValid &&  $("input[name='checkNumbers']:checked").val()){
+        let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
+        isValid=test.checkIsAnyContinuum(parseInt(valueArr[0]),parseInt(valueArr[1]))
+
+    }
+
+
+
     //Î²ÊýÉ¸Ñ¡
     if(isValid){
         let checkNumsMap={};
