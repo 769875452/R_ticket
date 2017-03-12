@@ -109,31 +109,35 @@
 
 
 			this.checkParagraph=function(paragraphArr){
-				for(let paragraph of paragraphArr){
-					var count=0;
-					let numsArrLength=this.numsArr.length;
-					let paragraphNumsLength=paragraph.paragraphNums.length;
-					for(var i=0;i<numsArrLength;i++){
-						let paragraphLen=paragraph.paragraphNums.length;
-						for(var j=(paragraphLen-1);j>=0;j--){
-							if(this.numsArr[i]==paragraph.paragraphNums[j]){
-								count++;
-								if(paragraph.isInclude){
-									if(count>=paragraph.paragraphLength){
-										return false;
+				let count=0;
+				let isValid=true;
+					paragraphArr.forEach((paragraph)=>{
+						count=0;
+						let numsArrLength=this.numsArr.length;
+						let paragraphNumsLength=paragraph.paragraphNums.length;
+						for(var i=0;i<numsArrLength;i++){
+							let paragraphLen=paragraph.paragraphNums.length;
+							for(var j=(paragraphLen-1);j>=0;j--){
+								if(this.numsArr[i]==paragraph.paragraphNums[j]){
+									count++;
+									if(paragraph.isInclude){
+										if(count>=paragraph.paragraphLength){
+											isValid=false;
+											return false;
+										}
+									}else{
+										if(paragraphNumsLength-count>=paragraph.paragraphLength){
+											isValid=false;
+											return false;
+										}
 									}
-								}else{
-									if(paragraphNumsLength-count>=paragraph.paragraphLength){
-										return false;
-									}
+									paragraph.paragraphNums.splice(j,1);
+									break;
 								}
-								paragraph.paragraphNums.splice(j,1);
-								break;
 							}
 						}
-					}
-				}
-				return true;
+					})
+				return isValid;
 			}
 			this.checkLastNumber=function(sameLength,checkNumsArr){
 				let numsArrLength=this.numsArr.length;

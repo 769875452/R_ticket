@@ -93,10 +93,7 @@ checkBySelect=(numsArr)=>{
     if(isValid &&  $("input[name='checkNumbers']:checked").val()){
         let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
         isValid=test.checkIsAnyContinuum(parseInt(valueArr[0]),parseInt(valueArr[1]))
-
     }
-
-
 
     //Î²ÊýÉ¸Ñ¡
     if(isValid){
@@ -136,6 +133,12 @@ checkBySelect=(numsArr)=>{
                 return false;
             }
         })
+    }
+    if(isValid && $("input[name='simpleNums']:checked").val()){
+        let checkNumsArr=$("#inputSelectNumber").val().split(",");
+        isValid=test.checkParagraph([{paragraphLength:parseInt($("input[name='simpleNums']:checked").val()),paragraphNums:checkNumsArr,isInclude:true}])
+        console.log(isValid)
+
     }
     return isValid;
 }

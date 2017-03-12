@@ -65,6 +65,16 @@
 	</div>
 </div>
 
+<div class="check-title">独立号码筛选(以逗号分隔多个数)</div>
+<div class="form-group flex-group">
+	<label class="flex-group-title" for="inputSelectNumber">输入号码</label>
+	<input type="text" class="form-control" id="inputSelectNumber" placeholder="请输入">
+</div>
+<div class="haveNumber">
+	排除含有(个)的数
+
+</div>
+
 <div class="filter-result">
 	已筛选出<span class="filter-result-length"></span>个
 	剩余<span class="filter-result-have"></span>个
@@ -192,7 +202,13 @@
 					'</label>';
 			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
 		}
-		$(".checkbox-paragraph").append("<br>");
+		$(".checkbox-paragraph").append("<br>")
+	}
+	//独立号码筛选
+	for(var i=2;i<8;i++){
+		$(".haveNumber").append('<label class="radio-inline"> ' +
+				'<input type="radio" class="check-simple-number" name="simpleNums" value="'+i+'">  ' +i+
+				'个</label>')
 	}
 
 
