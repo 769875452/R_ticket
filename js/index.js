@@ -2,6 +2,8 @@ var checkNumsLength=0;
 var allNums=[];
 var test=new Rticket.ticket();
 var validNumsArr=[];
+var allNumsLength=1;
+var isContinue=true
 
 handleCheckStart=()=>{
     allNums=[];
@@ -19,22 +21,60 @@ handleCheckStart=()=>{
             }
         }
     });
+    $("input[name='notInNums_1']:checked").each(function(){
+        let notInNumsValue=$(this).val().split("-");
+        let notIncludeNum=notInNumsValue[1];
+        let allNumsLength=allNums.length;
+        for(let i=0;i<allNumsLength;i++){
+            if(allNums[i]%10==notIncludeNum){
+                allNums.splice(i,1);
+                break;
+            }
+        }
+    });
 
-    let allNumsLength=allNums.length;
     let numsArr=[];
     for(let i=0;i<checkNumsLength;i++){
         numsArr[i]=allNums[i];
     }
-    while(true){
-        let isValid=checkBySelect(numsArr);
-        if(isValid) {
-            validNumsArr.push(numsArr.concat([]))
-        }
-        numsArr=handleAddNumByIndex(numsArr,(checkNumsLength-1))
-        if(!numsArr || validNumsArr.length>=1000){
-            break;
-        }
+
+    allNumsLength=1;
+    for(let i=0;i<checkNumsLength;i++){
+        allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
     }
+    $(".filter-result-have").html(allNumsLength)
+    $(".filter-result-length").html(0);
+    mainLoop(numsArr);
+
+}
+function mainLoop(numsArr){
+    allNumsLength--;
+
+    if(!numsArr || validNumsArr.length>=1000 ||!isContinue){
+        $("#numsResult").modal();
+        $(".result-table").html("");
+        $("#numsLength").html(validNumsArr.length);
+        validNumsArr.forEach((result)=>{
+            let tr=$('<tr></tr>').appendTo(".result-table");
+            result.forEach((td)=>{
+                tr.append('<td>'+td+'</td>')
+            })
+        });
+    }else{
+        $(".filter-result-length").html(validNumsArr.length);
+        $(".filter-result-have").html(allNumsLength)
+        window.setTimeout(function(){
+            numsArr=getNestNumAndCheck(numsArr)
+        },0)
+    }
+}
+function getNestNumAndCheck(numsArr){
+    let isValid=checkBySelect(numsArr);
+    if(isValid) {
+        validNumsArr.push(numsArr.concat([]))
+    }
+    numsArr=handleAddNumByIndex(numsArr,(checkNumsLength-1));
+    mainLoop(numsArr);
 }
 
 checkBySelect=(numsArr)=>{

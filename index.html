@@ -65,10 +65,18 @@
 	</div>
 </div>
 
+<div class="filter-result">
+	已筛选出<span class="filter-result-length"></span>个
+	剩余<span class="filter-result-have"></span>个
+</div>
 
 <button type="button" class="check-start btn btn-primary btn-default">
 	筛选结果
 </button>
+<button type="button" class="check-stop btn btn-danger btn-default" >
+	停止筛选
+</button>
+
 
 
 
@@ -119,17 +127,13 @@
 
 
 	$(".check-start").click(function(){
-		$("#numsResult").modal();
-		$(".result-table").html("");
+		$(".filter-result").show();
+		isContinue=true;
 		validNumsArr=[];
 		handleCheckStart();
-		$("#numsLength").html(validNumsArr.length);
-		validNumsArr.forEach((result)=>{
-			let tr=$('<tr></tr>').appendTo(".result-table");
-			result.forEach((td)=>{
-				tr.append('<td>'+td+'</td>')
-			})
-		});
+	})
+	$(".check-stop").click(function(){
+		isContinue=false;
 	})
 
 	//排除数字
