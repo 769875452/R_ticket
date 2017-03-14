@@ -115,10 +115,10 @@ checkBySelect=(numsArr)=>{
         }
     }
     if(isValid && $("#largerThan").val()){
-        isValid=!test.checkSumNumbers($("#largerThan").val())
+        isValid=test.checkSumNumbers($("#largerThan").val())
     }
     if(isValid && $("#smallerThan").val()){
-        isValid=test.checkSumNumbers($("#smallerThan").val()-1)
+        isValid=!test.checkSumNumbers($("#smallerThan").val()-1)
     }
 
 
@@ -137,8 +137,6 @@ checkBySelect=(numsArr)=>{
     if(isValid && $("input[name='simpleNums']:checked").val()){
         let checkNumsArr=$("#inputSelectNumber").val().split(",");
         isValid=test.checkParagraph([{paragraphLength:parseInt($("input[name='simpleNums']:checked").val()),paragraphNums:checkNumsArr,isInclude:true}])
-        console.log(isValid)
-
     }
     return isValid;
 }
