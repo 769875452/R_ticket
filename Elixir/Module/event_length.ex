@@ -5,6 +5,14 @@ defmodule EventLength do
     (rem num,2) ==0;
   end
 
+  def checkIsEvenOverLengthByIndex(numbers,length,count,index) when index>=(tuple_size numbers)do
+    IO.puts '结束了且应该没超出'
+  end
+
+  def checkIsEvenOverLengthByIndex(numbers,length,count,index) when count>=length do
+       IO.puts '超出了'
+  end
+
   def checkIsEvenOverLengthByIndex(numbers,length,count,index) do
        if checkIsEven(elem(numbers,index)) do
         checkIsEvenOverLengthByIndex(numbers,length,count+1,index+1)
@@ -13,12 +21,6 @@ defmodule EventLength do
        end
   end
 
-  def checkIsEvenOverLengthByIndex(numbers,length,count,index) when count>=length do
-       IO.puts '超出了'
-  end
-  def checkIsEvenOverLengthByIndex(numbers,length,count,index) when index>=(tuple_size numbers)do
-    IO.puts '结束了且应该没超出'
-  end
 
 
 
