@@ -2,7 +2,7 @@ defmodule EventLength do
   @moduledoc false
   ##检测是否为偶数
   def checkIsEven(num) do
-    (rem 10,2) ==0;
+    (rem num,2) ==0;
   end
 
   def checkIsEvenOverLengthByIndex(numbers,length,count,index) do
