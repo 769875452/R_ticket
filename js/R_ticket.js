@@ -108,6 +108,16 @@
 			//整体数组之间的关系为&&（有一个为false，则直接返回false）
 
 
+			this.checkIsHave=function(checkNumsArr){
+				let len=checkNumsArr.length;
+				for(let i=0;i<len;i++){
+					if(this.numsArr.indexOf(parseInt(checkNumsArr[i]))!=-1){
+						return true
+					}
+				}
+				return false;
+			}
+
 			this.checkParagraph=function(paragraphArr){
 				let count=0;
 				let isValid=true;
@@ -155,9 +165,6 @@
 				}
 				return true
 			}
-
-
-
 		}
 		
 	}(Rticket)

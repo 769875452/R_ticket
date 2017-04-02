@@ -3,13 +3,12 @@ var allNums=[];
 var test=new Rticket.ticket();
 var validNumsArr=[];
 var allNumsLength=1;
-var isContinue=true
+var isContinue=false;
 
 handleCheckStart=()=>{
     allNums=[];
     checkNumsLength=$("input[name='checkNumers']:checked").val() || 5;
-
-    for(let i=1;i<37;i++){
+    for(let i=1;i<38;i++){
         allNums.push(i);
     }
     $('input[name="notInNums"]:checked').each(function(){
@@ -49,20 +48,15 @@ handleCheckStart=()=>{
 }
 function mainLoop(numsArr){
     allNumsLength--;
-
-    if(!numsArr || validNumsArr.length>=1000 ||!isContinue){
-        $("#numsResult").modal();
-        $(".result-table").html("");
-        $("#numsLength").html(validNumsArr.length);
-        validNumsArr.forEach((result)=>{
-            let tr=$('<tr></tr>').appendTo(".result-table");
-            result.forEach((td)=>{
-                tr.append('<td>'+td+'</td>')
-            })
-        });
+    if(!numsArr ||!isContinue){
     }else{
         $(".filter-result-length").html(validNumsArr.length);
         $(".filter-result-have").html(allNumsLength)
+        $("#numsLength").html(validNumsArr.length);
+        pageobj.setalldatacount(validNumsArr.length);
+        if(validNumsArr.length>=(pageobj.pagenum-1)*pageobj.perpage && validNumsArr.length<(pageobj.pagenum)*pageobj.perpage){
+            getdata();
+        }
         window.setTimeout(function(){
             numsArr=getNestNumAndCheck(numsArr)
         },0)
@@ -80,7 +74,14 @@ function getNestNumAndCheck(numsArr){
 checkBySelect=(numsArr)=>{
     test.setNumsArr(numsArr)
 
+
     let isValid=true;
+    if(isValid && $("input[name='mustHave']:checked").val()){
+        let checkNumsArr=$("#inputSelectNumber").val().split(",");
+        isValid=test.checkIsHave(checkNumsArr);
+
+    }
+
     //ÆæÊıÅÅ³ı
     if(isValid && $("input[name='oddNumbres']:checked").val()){
         isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
