@@ -44,7 +44,6 @@ handleCheckStart=()=>{
     $(".filter-result-have").html(allNumsLength)
     $(".filter-result-length").html(0);
     mainLoop(numsArr);
-
 }
 
 
@@ -89,17 +88,17 @@ checkBySelect=(numsArr)=>{
     if(isValid && $("input[name='oddNumbres']:checked").val()){
         isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
     }
-    //Å¼ï¿½ï¿½
+    //Å¼ÊýÅÅ³ý
     if(isValid && $("input[name='evenNumbres']:checked").val()){
         isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
     }
-    //ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
+    //Á¬ºÅÅÅ³ý
     if(isValid &&  $("input[name='checkNumbers']:checked").val()){
         let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
         isValid=test.checkIsAnyContinuum(parseInt(valueArr[0]),parseInt(valueArr[1]))
     }
 
-    //Î²ï¿½ï¿½É¸Ñ¡
+    //Î²ÊýÉ¸Ñ¡
     if(isValid){
         let checkNumsMap={};
         $('.notInNums:checked').each(function(){
@@ -126,7 +125,7 @@ checkBySelect=(numsArr)=>{
     }
 
 
-    //ï¿½Ö¶ï¿½É¸Ñ¡
+    //·Ö¶ÎÉ¸Ñ¡
     if(isValid){
         $(".check-paragraph:checked").each(function(){
             let paragraphValue=$(this).val().split("-");
