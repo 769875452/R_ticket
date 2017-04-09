@@ -42,6 +42,8 @@
 				return true;
 				
 			}
+
+
 			//传入一个最大值maxNums
 			//当数组总和大于maxNums时，返回false
 			//否则返回true
@@ -56,6 +58,7 @@
 				return true;
 				
 			}
+
 			//传入一个连续的数值continuumLength
 			//当该数组最后几位数为连续的数且，连续的数量大于等于continuumLength，返回false
 			//否则返回true
@@ -82,7 +85,7 @@
 				return true;
 			}
 
-			//{startNum,continumLength}
+			//{startNum,continumLength} 分段筛选
 			this.checkContinuumParagraph=function(startNum,continumLength){
 				var count=0;
 				let start=startNum*10+1;
@@ -98,6 +101,24 @@
 				}
 				return true;
 			}
+
+
+      this.checkLastNumber=function(sameLength,checkNumsArr){
+        let numsArrLength=this.numsArr.length;
+        let checkNumsArrLength=checkNumsArr.length;
+        for(let j=0;j<checkNumsArrLength;j++){
+          let thisCheckNumsLength=0;
+          for(let i=0;i<numsArrLength;i++){
+            if(this.numsArr[i]%10==checkNumsArr[j]){
+              thisCheckNumsLength++;
+              if(thisCheckNumsLength>=sameLength){
+                return false;
+              }
+            }
+          }
+        }
+        return true
+      }
 
 			//传入一个数组，数组内有如下格式的段落对象
 			//段落对象有3个属性 检查的个数(paragraphLength)，检查的数字数组(paragraphNums),排除还是包含(isInclude:boolean)
@@ -138,22 +159,6 @@
 						}
 					})
 				return isValid;
-			}
-			this.checkLastNumber=function(sameLength,checkNumsArr){
-				let numsArrLength=this.numsArr.length;
-				let checkNumsArrLength=checkNumsArr.length;
-				for(let j=0;j<checkNumsArrLength;j++){
-					let thisCheckNumsLength=0;
-					for(let i=0;i<numsArrLength;i++){
-						if(this.numsArr[i]%10==checkNumsArr[j]){
-							thisCheckNumsLength++;
-							if(thisCheckNumsLength>=sameLength){
-								return false;
-							}
-						}
-					}
-				}
-				return true
 			}
 
 
