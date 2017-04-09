@@ -45,7 +45,12 @@
     margin: 10px;
     display: none;
 }
-.haveNumber{
+.haveNumber,.mustHave{
     margin-left: 10px;
     margin-bottom: 10px;
+}
+.ticket-page{
+    height:30px;
+    line-height: 30px;
+    background: #ccc;
 }

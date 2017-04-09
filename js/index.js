@@ -3,13 +3,12 @@ var allNums=[];
 var test=new Rticket.ticket();
 var validNumsArr=[];
 var allNumsLength=1;
-var isContinue=true
+var isContinue=false;
 
 handleCheckStart=()=>{
     allNums=[];
     checkNumsLength=$("input[name='checkNumers']:checked").val() || 5;
-
-    for(let i=1;i<37;i++){
+    for(let i=1;i<38;i++){
         allNums.push(i);
     }
     $('input[name="notInNums"]:checked').each(function(){
@@ -45,27 +44,21 @@ handleCheckStart=()=>{
     $(".filter-result-have").html(allNumsLength)
     $(".filter-result-length").html(0);
     mainLoop(numsArr);
-
 }
 
 
 
 function mainLoop(numsArr){
     allNumsLength--;
-
-    if(!numsArr || validNumsArr.length>=10000 ||!isContinue){
-        $("#numsResult").modal();
-        $(".result-table").html("");
-        $("#numsLength").html(validNumsArr.length);
-        validNumsArr.forEach((result)=>{
-            let tr=$('<tr></tr>').appendTo(".result-table");
-            result.forEach((td)=>{
-                tr.append('<td>'+td+'</td>')
-            })
-        });
+    if(!numsArr ||!isContinue){
     }else{
         $(".filter-result-length").html(validNumsArr.length);
         $(".filter-result-have").html(allNumsLength)
+        $("#numsLength").html(validNumsArr.length);
+        pageobj.setalldatacount(validNumsArr.length);
+        if(validNumsArr.length>=(pageobj.pagenum-1)*pageobj.perpage && validNumsArr.length<(pageobj.pagenum)*pageobj.perpage){
+            getdata();
+        }
         window.setTimeout(function(){
             numsArr=getNestNumAndCheck(numsArr)
         },0)
@@ -83,22 +76,29 @@ function getNestNumAndCheck(numsArr){
 checkBySelect=(numsArr)=>{
     test.setNumsArr(numsArr)
 
+
     let isValid=true;
-    //ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½
+    if(isValid && $("input[name='mustHave']:checked").val()){
+        let checkNumsArr=$("#inputSelectNumber").val().split(",");
+        isValid=test.checkIsHave(checkNumsArr);
+
+    }
+
+    //ÆæÊýÅÅ³ý
     if(isValid && $("input[name='oddNumbres']:checked").val()){
         isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
     }
-    //Å¼ï¿½ï¿½
+    //Å¼ÊýÅÅ³ý
     if(isValid && $("input[name='evenNumbres']:checked").val()){
         isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
     }
-    //ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
+    //Á¬ºÅÅÅ³ý
     if(isValid &&  $("input[name='checkNumbers']:checked").val()){
         let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
         isValid=test.checkIsAnyContinuum(parseInt(valueArr[0]),parseInt(valueArr[1]))
     }
 
-    //Î²ï¿½ï¿½É¸Ñ¡
+    //Î²ÊýÉ¸Ñ¡
     if(isValid){
         let checkNumsMap={};
         $('.notInNums:checked').each(function(){
@@ -125,7 +125,7 @@ checkBySelect=(numsArr)=>{
     }
 
 
-    //ï¿½Ö¶ï¿½É¸Ñ¡
+    //·Ö¶ÎÉ¸Ñ¡
     if(isValid){
         $(".check-paragraph:checked").each(function(){
             let paragraphValue=$(this).val().split("-");

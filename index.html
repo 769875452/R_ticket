@@ -5,6 +5,7 @@
 <html lang="zh-CN" class="work">
 	<meta charset="utf-8">
 
+	<link rel="stylesheet" href="css/Rpage.css" type="text/css" />
 
 	<link href="./css/bootstrap.css" rel="stylesheet">
 
@@ -12,6 +13,7 @@
 
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script language="JavaScript" src="./js/Rpage.js"></script>
 
 	<script src="./js/R_ticket.js"></script>
 </head>
@@ -19,13 +21,13 @@
 <div class="check-title"> 筛选数量(不选的话默认为5)</div>
 <div class="radio-numbers">
 	<label class="radio-inline">
-		<input type="radio" name="checkNumers" value="5"> 36选5
+		<input type="radio" name="checkNumers" value="5"> 37选5
 	</label>
 	<label class="radio-inline">
-		<input type="radio" name="checkNumers" value="6"> 36选6
+		<input type="radio" name="checkNumers" value="6"> 37选6
 	</label>
 	<label class="radio-inline">
-		<input type="radio" name="checkNumers" value="7"> 36选7
+		<input type="radio" name="checkNumers" value="7"> 37选7
 	</label>
 </div>
 
@@ -72,6 +74,10 @@
 </div>
 <div class="haveNumber">
 	排除含有(个)的数
+</div>
+<div class="mustHave">
+	<input type="checkbox" name="mustHave" id="mustHaveCheckbox">
+	<label class="flex-group-title" for="mustHaveCheckbox">至少含有一个数以上</label>
 
 </div>
 
@@ -94,20 +100,23 @@
 
 
 
-
 <div class="modal fade" tabindex="-1" id="numsResult" role="dialog">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">筛选结果(为保证效率,最大显示1000条数据,当前有<span id="numsLength"></span>条)</h4>
+				<h4 class="modal-title">筛选结果,当前有(<span id="numsLength"></span>条)</h4>
 			</div>
 			<div class="modal-body modal-result">
+				<div class="ticket-page"></div>
 				<table class="result-table table table-bordered table-hover table-condensed table-striped">
 				</table>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">继续筛选</button>
+				<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>
+				<button type="button" class="check-stop btn btn-danger btn-default" >
+					停止筛选
+				</button>
 				<button type="button" class="btn btn-primary result-get-csv">导出结果</button>
 			</div>
 		</div><!-- /.modal-content -->
@@ -123,6 +132,7 @@
 </html>
 <script>
 
+
 	$(".result-get-csv").click(function(e){
 		var str=","+validNumsArr.map((result)=>{
 			return result.map((num)=>{
@@ -137,17 +147,27 @@
 
 
 	$(".check-start").click(function(){
-		$(".filter-result").show();
+		if(!isContinue){
+			isContinue=true;
+			pageobj.pagenum=1;
+			$(".result-table").html("");
+			$(".filter-result").show();
+			isContinue=true;
+			validNumsArr=[];
+			handleCheckStart();
+		}
+		$("#numsResult").modal();
+	})
+	$(".btn-continue").click(function(){
 		isContinue=true;
-		validNumsArr=[];
-		handleCheckStart();
+		mainLoop(validNumsArr[validNumsArr.length-1])
 	})
 	$(".check-stop").click(function(){
 		isContinue=false;
 	})
 
 	//排除数字
-	for(let i=1;i<37;i++){
+	for(let i=1;i<38;i++){
 		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
 				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
 				'</label>');
@@ -205,7 +225,7 @@
 		$(".checkbox-paragraph").append("<br>")
 	}
 	//独立号码筛选
-	for(var i=2;i<8;i++){
+	for(var i=1;i<8;i++){
 		$(".haveNumber").append('<label class="radio-inline"> ' +
 				'<input type="radio" class="check-simple-number" name="simpleNums" value="'+i+'">  ' +i+
 				'个</label>')
@@ -226,6 +246,28 @@
 		$(this).attr("data-ischecked")
 	})
 
+
+
+	var pageobj=new Rpage.pageObj($(".ticket-page"));
+	pageobj.perpage=50;
+	function getdata(){
+		$(".result-table").html("");
+		let validNumsArrLen=validNumsArr.length
+		for(let i=(pageobj.pagenum-1)*pageobj.perpage;
+			i<(pageobj.pagenum)*pageobj.perpage && i<validNumsArrLen;
+			i++){
+			let tr=$('<tr></tr>').appendTo(".result-table");
+			validNumsArr[i].forEach((td)=>{
+				tr.append('<td>'+td+'</td>')
+			});
+		}
+		pageobj.setalldatacount(validNumsArr.length);
+	}
+	pageobj.setpagechange(
+			function(){
+				getdata();
+			}
+	);
 
 </script>
 <script type="text/javascript" src="js/index.js"></script>
