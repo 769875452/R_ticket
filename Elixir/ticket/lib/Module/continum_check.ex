@@ -1,30 +1,33 @@
 defmodule ContinumCheck do
   @moduledoc false
 
-    def isContinum(index,nums) do
-      ((elem nums,index+1)-(elem nums,index))==1
+    def isContinum(nums) do
+      (hd nums)-(hd (tl nums))==1
     end
 
-    def nextContinum(index,count,nums,continumLength) when count >continumLength do
+    def nextContinum(count,_,continumLength) when count >continumLength do
         false
     end
 
-    def nextContinum(index,count,nums,continumLength) when (index+1)>=(tuple_size nums) do
+    def nextContinum(_,tlNums,_) when (tl tlNums)==[] do
       true
     end
-  def nextContinum(index,count,nums,continumLength) do
-    if isContinum index,nums do
-      nextContinum(index+1,count+1,nums,continumLength)
+
+  def nextContinum(count,tlNums,continumLength) do
+    count=
+    if isContinum tlNums do
+        count+1
     else
-      nextContinum(index+1,1,nums,continumLength)
+        1
     end
+    nextContinum(count,(tl tlNums),continumLength)
   end
 
 
 
 
   def continumCheck(nums,continumLength) do
-    nextContinum(0,1,nums,continumLength);
+    nextContinum(1,nums,continumLength);
   end
 
 end

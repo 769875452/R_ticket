@@ -5,24 +5,25 @@ defmodule EvenLength do
     (rem num,2) ==0;
   end
 
-  def checkIsEvenOverLengthByIndex(numbers,_,_,index) when index>=(tuple_size numbers)do
+  def checkIsEvenOverLengthByIndex(tlNums,_,_) when  tlNums==[] do
     true
   end
 
-  def checkIsEvenOverLengthByIndex(_,length,count,_) when count>=length do
+  def checkIsEvenOverLengthByIndex(_,maxLength,count) when count>=maxLength do
      false
   end
 
-  def checkIsEvenOverLengthByIndex(numbers,length,count,index) do
-       if (checkIsEven elem numbers,index) do
-        checkIsEvenOverLengthByIndex numbers,length,count+1,index+1
+  def checkIsEvenOverLengthByIndex(tlNums,maxLength,count) do
+        count=
+       if (checkIsEven hd tlNums) do
+        count+1
        else
-        checkIsEvenOverLengthByIndex numbers,length,count,index+1
+        count
        end
+       checkIsEvenOverLengthByIndex numbers,maxLength,count
   end
 
-  def checkIsEvenOverLength(numbers,length) do
-    count=0;
-    checkIsEvenOverLengthByIndex numbers,length,count,0;
+  def checkIsEvenOverLength(nums,maxLength) do
+    checkIsEvenOverLengthByIndex nums,maxLength,0;
   end
 end

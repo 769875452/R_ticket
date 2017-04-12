@@ -1,13 +1,13 @@
 defmodule SumCheck do
   @moduledoc false
-  def getSumStep(nums,sum,index) when index>=(tuple_size nums) do
+  def getSumStep(tlNums,sum) when tlNums==[] do
     sum
   end
-  def getSumStep(nums,sum,index)do
-    getSumStep nums,sum+(elem nums,index),index+1
+  def getSumStep(tlNums,sum)do
+    getSumStep (tl tlNums),sum+(hd tlNums)
   end
   def getSum(nums) do
-    getSumStep nums,0,0
+    getSumStep nums,0
   end
 
 

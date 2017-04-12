@@ -5,29 +5,31 @@ defmodule CheckParagraphNumsCount do
     num>=startNum && num <=endNum
   end
 
-  def nextCheckInRange(nums,_,endNum,_,index,count) when (elem nums,index)>endNum  do
+  def nextCheckInRange(_,endNum,_,tlNums,count) when (hd tlNums)>endNum  do
     true
   end
 
-  def nextCheckInRange(nums,_,_,_,index,_) when index>=(tuple_size nums)  do
+  def nextCheckInRange(_,_,_,tlNums,_) when tlNums==[]  do
     true
   end
 
-  def nextCheckInRange(_,_,_,maxCount,_,count) when count >=maxCount do
+  def nextCheckInRange(_,_,maxCount,_,count) when count >=maxCount do
     false
   end
 
-    def nextCheckInRange(nums,startNum,endNum,maxCount,index,count) do
-        if checkIsInRange (elem nums,index),startNum,endNum do
-          nextCheckInRange nums,startNum,endNum,maxCount,index+1,count+1;
-          else
-          nextCheckInRange nums,startNum,endNum,maxCount,index+1,count;
+    def nextCheckInRange(startNum,endNum,maxCount,tlNums,count) do
+    count=
+        if checkIsInRange (hd tlNums),startNum,endNum do
+            count+1
+        else
+            count
         end
+        nextCheckInRange startNum,endNum,maxCount,(tl tlNums),count;
     end
 
   def checkParagraphNumsCount(nums,start,maxCount) do
 	startNum=start*10+1;
     endNum=(start+1)*10;
-    nextCheckInRange nums,startNum,endNum,maxCount,0,0
+    nextCheckInRange startNum,endNum,maxCount,nums,0
   end
 end
