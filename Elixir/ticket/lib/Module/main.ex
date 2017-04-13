@@ -1,27 +1,60 @@
 defmodule Main do
   @moduledoc false
 
+
   def main do
     excludeNums=[]
     allNums=setNumToAll([],excludeNums,1)
-    checkNumsLength=7;
-    checkNums=(getStartNums allNums,checkNumsLength,[],1)
-    result=mainLoop(checkNums,[],allNums)
-    IO.puts "result-------------------"
-    for nums<-result do
-        iOPUTLIST nums
-    end
-    result
+    checkNumsLength=2;
+#    checkNums=(getStartNums allNums,checkNumsLength,[],1)
+    startNewLoop(allNums,checkNumsLength)
+#    result=mainLoop(checkNums,[],allNums)
+#    IO.puts "result-------------------"
+#    for nums<-result do
+#        iOPUTLIST nums
+#    end
+#    IO.puts "result++++++++++"
+#    result
   end
 
-  def mainLoop(checkNums,result,allNums) do
+    def startNewLoop(checkNums,allNums,tlNums) when tlNums==[] do
+      false
+    end
 
-     iOPUTLIST checkNums
-     result=result ++ [checkNums]
+  def startNewLoop(allNums,checkNumsLength,tlNums) do
+      mainLoop (getStartNums (tl tlNums),checkNumsLength,[],1),[],allNums,(hd tlNums)
+      startNewLoop allNums,checkNumsLength,(tl tlNums)
+  end
 
+  def startNewLoop(allNums,checkNumsLength) do
+
+#    spawn(
+#        fn ->
+         mainLoop (getStartNums (tl allNums),checkNumsLength,[],1),[],allNums,(hd allNums)
+#         end
+#     )
+#     receive do
+#       {^pid,result}->
+#       for nums<-result do
+#               iOPUTLIST nums
+#       end
+#     end
+     startNewLoop allNums,checkNumsLength,(tl allNums)
+  end
+
+
+
+
+  def mainLoop(checkNums,result,allNums,staticNum) do
+     result=result ++ [checkNums++[staticNum]]
+     iOPUTLIST (checkNums++[staticNum])
+#     IO.puts length result
      nextNums=getNextNums(checkNums,allNums,true)
+     result=
      if (nextNums)!=false do
-       result=mainLoop(nextNums,(result),allNums)
+       mainLoop(nextNums,(result),allNums,staticNum)
+       else
+       result
      end
      result
   end
@@ -134,7 +167,7 @@ defmodule Main do
 
 
 
-  def setNumToAll(allNums,excludeNums,now) when now >37 do
+  def setNumToAll(allNums,excludeNums,now) when now >5 do
     allNums
   end
 
@@ -150,13 +183,14 @@ defmodule Main do
   end
 
   def iOPUTLIST(list) do
+
   IO.write "["
     for value<-list do
       IO.write value
       IO.write ","
     end
     IO.write "]"
-    IO.puts "------------"
+    IO.puts "-----------------------------"
   end
 
 end
