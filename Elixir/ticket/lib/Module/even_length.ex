@@ -20,7 +20,7 @@ defmodule EvenLength do
        else
         count
        end
-       checkIsEvenOverLengthByIndex numbers,maxLength,count
+       checkIsEvenOverLengthByIndex (tl tlNums),maxLength,count
   end
 
   def checkIsEvenOverLength(nums,maxLength) do

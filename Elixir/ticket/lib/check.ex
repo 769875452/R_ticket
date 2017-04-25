@@ -1,6 +1,12 @@
 defmodule Check do
-  import Plug.Conn
 
+  import Plug.Conn
+  import CheckLastNum;
+  import CheckParagraphNumsCount;
+  import ContinumCheck;
+  import EvenLength;
+  import OddLength;
+  import SumCheck;
 
   def init(options), do: options
 

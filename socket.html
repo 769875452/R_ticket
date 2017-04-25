@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>socket</title>
+</head>
+<body>
+
+</body>
+</html>
+<script language="JavaScript">
+    websocket = new WebSocket("ws://127.0.0.1:8082/");
+    websocket.onopen = function(evt) {
+        console.log("websocket success")
+    };
+    websocket.onclose = function(evt) {
+        console.log("websocket fail")
+    };
+    websocket.onmessage = function(evt) {
+        console.log("websocket msg",evt.data,evt);
+    };
+    websocket.onerror = function(evt) {
+        console.log("websocket error",evt.data);
+    };
+</script>

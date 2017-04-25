@@ -1,13 +1,24 @@
 defmodule Main do
   @moduledoc false
 
+  @checkNumsLength 4
+  @result []
+
+
+  def main(option,client) do
+    allNums=setNumToAll([],[],1)
+    startNewLoop(allNums,option,client)
+
+
+  end
 
   def main do
     excludeNums=[]
     allNums=setNumToAll([],excludeNums,1)
-    checkNumsLength=2;
-#    checkNums=(getStartNums allNums,checkNumsLength,[],1)
-    startNewLoop(allNums,checkNumsLength)
+#    checkNums=(getStartNums allNums,@checkNumsLength,[],1)
+
+#    startNewLoop(allNums)
+
 #    result=mainLoop(checkNums,[],allNums)
 #    IO.puts "result-------------------"
 #    for nums<-result do
@@ -17,20 +28,25 @@ defmodule Main do
 #    result
   end
 
-    def startNewLoop(checkNums,allNums,tlNums) when tlNums==[] do
-      false
-    end
 
-  def startNewLoop(allNums,checkNumsLength,tlNums) do
-      mainLoop (getStartNums (tl tlNums),checkNumsLength,[],1),[],allNums,(hd tlNums)
-      startNewLoop allNums,checkNumsLength,(tl tlNums)
+  def startNewLoop(allNums,tlNums,option,client) when tlNums==[] do
+    false
   end
 
-  def startNewLoop(allNums,checkNumsLength) do
+  def startNewLoop(allNums,tlNums,option,client) when (length tlNums) <= @checkNumsLength do
+    false
+  end
+
+  def startNewLoop(allNums,tlNums,option,client) do
+      mainLoop (getStartNums (tl tlNums),[],1),[],allNums,(hd tlNums),option,client
+      startNewLoop allNums,(tl tlNums),option,client
+  end
+
+  def startNewLoop(allNums,option,client) do
 
 #    spawn(
 #        fn ->
-         mainLoop (getStartNums (tl allNums),checkNumsLength,[],1),[],allNums,(hd allNums)
+         mainLoop (getStartNums (tl allNums),[],1),[],allNums,(hd allNums),option,client
 #         end
 #     )
 #     receive do
@@ -39,21 +55,25 @@ defmodule Main do
 #               iOPUTLIST nums
 #       end
 #     end
-     startNewLoop allNums,checkNumsLength,(tl allNums)
+     startNewLoop allNums,(tl allNums),option,client
   end
 
 
 
 
-  def mainLoop(checkNums,result,allNums,staticNum) do
+  def mainLoop(checkNums,result,allNums,staticNum,option,client) do
      result=result ++ [checkNums++[staticNum]]
      iOPUTLIST (checkNums++[staticNum])
-#     IO.puts length result
+
+    {status, jsonResult} = JSON.encode(checkNums++[staticNum])
+     client |> Socket.Web.send! ({ :text, jsonResult })
+#     IO.puts lengtsh result
      nextNums=getNextNums(checkNums,allNums,true)
      result=
      if (nextNums)!=false do
-       mainLoop(nextNums,(result),allNums,staticNum)
+       mainLoop nextNums,(result),allNums,staticNum,option,client
        else
+#        iOPUTLIST @result
        result
      end
      result
@@ -143,16 +163,16 @@ defmodule Main do
 
 
 
-  def getStartNums(tlAllNums,checkNumsLength,nums,nowLength) when tlAllNums==[] do
+  def getStartNums(tlAllNums,nums,nowLength) when tlAllNums==[] do
     nums
   end
 
-  def getStartNums(tlAllNums,checkNumsLength,nums,nowLength) when nowLength>checkNumsLength do
+  def getStartNums(tlAllNums,nums,nowLength) when nowLength>@checkNumsLength do
     nums
   end
 
-  def getStartNums(allNums,checkNumsLength,nums,nowLength) do
-    getStartNums (tl allNums),checkNumsLength,[(hd allNums)]++nums,nowLength+1
+  def getStartNums(allNums,nums,nowLength) do
+    getStartNums (tl allNums),[(hd allNums)]++nums,nowLength+1
   end
 
 
@@ -167,7 +187,7 @@ defmodule Main do
 
 
 
-  def setNumToAll(allNums,excludeNums,now) when now >5 do
+  def setNumToAll(allNums,excludeNums,now) when now >10 do
     allNums
   end
 

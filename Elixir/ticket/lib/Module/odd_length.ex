@@ -20,7 +20,7 @@ defmodule OddLength do
        else
        count
        end
-        checkIsOddOverLengthByIndex numbers,maxLength,count
+        checkIsOddOverLengthByIndex (tl tlNums),maxLength,count
   end
 
   def checkIsOddOverLength(nums,maxLength) do

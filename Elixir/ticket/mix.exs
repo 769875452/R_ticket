@@ -15,9 +15,9 @@ defmodule Ticket.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:cowboy, :plug],
-     mod: {Ticket, []},
-     env: [cowboy_port: 8080]]
+    [applications: [:cowboy, :plug,:logger],
+     mod: {TicketSocket, []},
+     env: [cowboy_port: 8888]]
   end
 
   # Dependencies can be Hex packages:
@@ -30,7 +30,11 @@ defmodule Ticket.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
+
     [{:cowboy, "~> 1.0.0"},
-     {:plug, "~> 1.0"}]
+     {:plug, "~> 1.0"},
+    {:socket, "~> 0.3"},
+    {:json, "~> 1.0"}
+    ]
   end
 end
