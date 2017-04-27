@@ -5,7 +5,7 @@ defmodule ContinumCheck do
       (hd nums)-(hd (tl nums))==1
     end
 
-    def nextContinum(count,_,continumLength) when count >continumLength do
+    def nextContinum(count,_,continumLength) when count >=continumLength do
         false
     end
 
@@ -15,7 +15,7 @@ defmodule ContinumCheck do
 
   def nextContinum(count,tlNums,continumLength) do
     count=
-    if isContinum tlNums do
+    if (isContinum tlNums) do
         count+1
     else
         1
@@ -25,6 +25,10 @@ defmodule ContinumCheck do
 
 
 
+
+  def continumCheck(_,continumLength) when continumLength == nil do
+    true
+  end
 
   def continumCheck(nums,continumLength) do
     nextContinum(1,nums,continumLength);

@@ -17,4 +17,5 @@
 #  IO.puts "---------------"
 #end
 #IO.puts CheckParagraphNumsCount.checkParagraphNumsCount([1,2,11,12,13],1,3)
-Main.main()
+#Main.main()
+IO.puts OddLength.checkIsOddOverLength([5,4,3,2,1],2)

@@ -23,6 +23,12 @@ defmodule EvenLength do
        checkIsEvenOverLengthByIndex (tl tlNums),maxLength,count
   end
 
+
+  def checkIsEvenOverLength(_,maxLength) when maxLength == nil do
+  IO.puts "没有偶数"
+    true
+  end
+
   def checkIsEvenOverLength(nums,maxLength) do
     checkIsEvenOverLengthByIndex nums,maxLength,0;
   end

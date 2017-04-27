@@ -23,7 +23,6 @@ defmodule TicketSocket do
     def getMsg(client) do
         case client |> Socket.Web.recv! do
             {:text,data} ->
-            IO.puts data
             json_input=data
             {status,list}=JSON.decode(json_input)
             IO.puts status

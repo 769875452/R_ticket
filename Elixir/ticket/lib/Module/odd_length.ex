@@ -5,11 +5,11 @@ defmodule OddLength do
     (rem num,2) == 1;
   end
 
-  def checkIsOddOverLengthByIndex(tlNums,_,_,_) when tlNums==[] do
+  def checkIsOddOverLengthByIndex(tlNums,_,_) when tlNums==[] do
     true
   end
 
-  def checkIsOddOverLengthByIndex(_,maxLength,count,_) when count>=maxLength do
+  def checkIsOddOverLengthByIndex(_,maxLength,count) when count>=maxLength do
      false
   end
 
@@ -21,6 +21,12 @@ defmodule OddLength do
        count
        end
         checkIsOddOverLengthByIndex (tl tlNums),maxLength,count
+  end
+
+
+  def checkIsOddOverLength(_,maxLength) when maxLength == nil do
+      IO.puts "没有奇数"
+        true
   end
 
   def checkIsOddOverLength(nums,maxLength) do

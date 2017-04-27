@@ -5,6 +5,25 @@ var validNumsArr=[];
 var allNumsLength=1;
 var isContinue=false;
 
+websocket = new WebSocket("ws://127.0.0.1:8082/");
+websocket.onopen = function(evt) {
+    console.log("websocket success")
+};
+websocket.onclose = function(evt) {
+    console.log("websocket fail")
+};
+websocket.onmessage = function(evt) {
+    if(evt.data=="endOne"){
+        console.log("完成一个")
+        getdata()
+    }else{
+        validNumsArr.push(JSON.parse(evt.data));
+    }
+    // getdata()
+};
+websocket.onerror = function(evt) {
+    console.log("websocket error",evt.data);
+};
 handleCheckStart=()=>{
     // allNums=[];
     // checkNumsLength=$("input[name='checkNumers']:checked").val() || 5;
@@ -13,15 +32,29 @@ handleCheckStart=()=>{
     // }
     let excludeNums=[]
     $('input[name="notInNums"]:checked').each(function(){
-        excludeNums.push($(this).val());
-        // let allNumsLength=allNums.length;
-        // for(let i=0;i<allNumsLength;i++){
-        //     if(allNums[i]==$(this).val()){
-        //         allNums.splice(i,1);
-        //         break;
-        //     }
-        // }
+        excludeNums.push(parseInt($(this).val()));
     });
+    let option={};
+    option.excludeNums=excludeNums;
+
+
+    //连续数
+    console.log($("input[name='checkNumbers']:checked").val())
+    if($("input[name='checkNumbers']:checked").val()){
+        let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
+        option.continumCheckValue=parseInt(valueArr[0])
+        console.log(option)
+    }
+
+    //奇数偶数
+    if($("input[name='oddNumbres']:checked").val()){
+        option.oddNumbresCheckValue=parseInt($("input[name='oddNumbres']:checked").val())
+    }
+    if($("input[name='evenNumbres']:checked").val()){
+        option.evenNumbresCheckValue=parseInt($("input[name='evenNumbres']:checked").val())
+    }
+
+    websocket.send(JSON.stringify(option))
     // $("input[name='notInNums_1']:checked").each(function(){
     //     let notInNumsValue=$(this).val().split("-");
     //     let notIncludeNum=notInNumsValue[1];
@@ -90,11 +123,6 @@ checkBySelect=(numsArr)=>{
     //ż���ų�
     if(isValid && $("input[name='evenNumbres']:checked").val()){
         isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
-    }
-    //�����ų�
-    if(isValid &&  $("input[name='checkNumbers']:checked").val()){
-        let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
-        isValid=test.checkIsAnyContinuum(parseInt(valueArr[0]),parseInt(valueArr[1]))
     }
 
     //β��ɸѡ
