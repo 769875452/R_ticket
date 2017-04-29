@@ -5,13 +5,14 @@ defmodule EvenLength do
     (rem num,2) ==0;
   end
 
+  def checkIsEvenOverLengthByIndex(_,maxLength,count) when count>=maxLength do
+     false
+  end
+
   def checkIsEvenOverLengthByIndex(tlNums,_,_) when  tlNums==[] do
     true
   end
 
-  def checkIsEvenOverLengthByIndex(_,maxLength,count) when count>=maxLength do
-     false
-  end
 
   def checkIsEvenOverLengthByIndex(tlNums,maxLength,count) do
         count=
@@ -25,7 +26,6 @@ defmodule EvenLength do
 
 
   def checkIsEvenOverLength(_,maxLength) when maxLength == nil do
-  IO.puts "没有偶数"
     true
   end
 

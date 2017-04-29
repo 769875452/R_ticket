@@ -28,6 +28,15 @@ defmodule CheckLastNum do
   end
 
 
+  def checkLastNum(_,sameLength,_) when (sameLength == nil) do
+    true
+  end
+
+  def checkLastNum(_,_,checkNums) when (checkNums == nil) do
+    true
+  end
+
+
   def checkLastNum(nums,sameLength,checkNums) do
         checkNumsIsOverflowCheckNum(nums,sameLength,checkNums,nums,checkNums,0);
   end

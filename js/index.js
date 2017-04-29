@@ -34,8 +34,20 @@ handleCheckStart=()=>{
     $('input[name="notInNums"]:checked').each(function(){
         excludeNums.push(parseInt($(this).val()));
     });
+    $("input[name='notInNums_1']:checked").each(function(){
+        let notInNumsValue=$(this).val().split("-");
+        let notIncludeNum=notInNumsValue[1];
+        for(let i=0;i<4;i++){
+            let thisNum=(i*10)+parseInt(notIncludeNum);
+            excludeNums.filter((num)=>{
+                return num!=(thisNum)
+            })
+            excludeNums.push(thisNum);
+        }
+    });
     let option={};
     option.excludeNums=excludeNums;
+    console.log(excludeNums)
 
 
     //连续数
@@ -53,6 +65,32 @@ handleCheckStart=()=>{
     if($("input[name='evenNumbres']:checked").val()){
         option.evenNumbresCheckValue=parseInt($("input[name='evenNumbres']:checked").val())
     }
+
+    //尾数排除
+    let checkNumsMap={};
+    $('.notInNums:checked').each(function(){
+        let notInNumsValue=$(this).val().split("-");
+        let sameLength=notInNumsValue[0];
+        if(parseInt(sameLength)===1){
+            return true
+        }
+        if(!checkNumsMap[sameLength]){
+            checkNumsMap[sameLength]=[]
+        }
+        let checkNums=notInNumsValue[1];
+        checkNumsMap[sameLength].push(parseInt(checkNums));
+    })
+    for(let sameLength in checkNumsMap){
+        option["lastNumberSameLength"+sameLength]=parseInt(sameLength);
+        option["laskNumberCheckNums"+sameLength]=checkNumsMap[sameLength];
+    }
+
+
+
+
+
+
+
 
     websocket.send(JSON.stringify(option))
     // $("input[name='notInNums_1']:checked").each(function(){

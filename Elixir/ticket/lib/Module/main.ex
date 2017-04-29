@@ -1,7 +1,7 @@
 defmodule Main do
   @moduledoc false
 
-  @checkNumsLength 4
+  @checkNumsLength 2
   @result []
 
 
@@ -57,9 +57,12 @@ defmodule Main do
 
 
   def checkLoop(checkNums,option) do
+  iOPUTLIST option["laskNumberCheckNums2"]
       ContinumCheck.continumCheck(checkNums,option["continumCheckValue"]) &&
       OddLength.checkIsOddOverLength(checkNums,option["oddNumbresCheckValue"]) &&
-      EvenLength.checkIsEvenOverLength(checkNums,option["evenNumbresCheckValue"])
+      EvenLength.checkIsEvenOverLength(checkNums,option["evenNumbresCheckValue"]) &&
+      CheckLastNum.checkLastNum(checkNums,option["lastNumberSameLength2"],option["laskNumberCheckNums2"]) &&
+      CheckLastNum.checkLastNum(checkNums,option["lastNumberSameLength3"],option["laskNumberCheckNums3"])
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client) do
@@ -67,7 +70,6 @@ defmodule Main do
      result=result ++ [tempNums]
 #     iOPUTLIST (checkNums++[staticNum])
     if(checkLoop(tempNums,option)) do
-    iOPUTLIST tempNums
         {status, jsonResult} = JSON.encode(tempNums)
          client |> Socket.Web.send! ({ :text, jsonResult })
     end
@@ -191,7 +193,7 @@ defmodule Main do
 
 
 
-  def setNumToAll(allNums,excludeNums,now) when now >10 do
+  def setNumToAll(allNums,excludeNums,now) when now >30 do
     allNums
   end
 
