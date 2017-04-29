@@ -39,7 +39,6 @@ defmodule Main do
 
     spawn(
         fn ->
-            IO.puts (hd tlNums);
             mainLoop (getStartNums (tl tlNums),[],1),[],allNums,(hd tlNums),option,client
          end
      )
@@ -57,12 +56,15 @@ defmodule Main do
 
 
   def checkLoop(checkNums,option) do
-  iOPUTLIST option["laskNumberCheckNums2"]
       ContinumCheck.continumCheck(checkNums,option["continumCheckValue"]) &&
       OddLength.checkIsOddOverLength(checkNums,option["oddNumbresCheckValue"]) &&
       EvenLength.checkIsEvenOverLength(checkNums,option["evenNumbresCheckValue"]) &&
-      CheckLastNum.checkLastNum(checkNums,option["lastNumberSameLength2"],option["laskNumberCheckNums2"]) &&
-      CheckLastNum.checkLastNum(checkNums,option["lastNumberSameLength3"],option["laskNumberCheckNums3"])
+      CheckLastNum.checkLastNum(checkNums,2,option["laskNumberCheckNums2"]) &&
+      CheckLastNum.checkLastNum(checkNums,3,option["laskNumberCheckNums3"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,0,option["paragraphCount0"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,1,option["paragraphCount1"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"])
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client) do
@@ -205,7 +207,7 @@ defmodule Main do
     setNumToAll allNums,(tl excludeNums),now+1
   end
   def setNumToAll(allNums,excludeNums,now) do
-  iOPUTLIST excludeNums;
+#  iOPUTLIST excludeNums;
     IO.puts is_integer(now)
     IO.puts is_integer(hd excludeNums)
     IO.puts now ==(hd excludeNums)

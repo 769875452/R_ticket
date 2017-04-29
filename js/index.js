@@ -81,10 +81,15 @@ handleCheckStart=()=>{
         checkNumsMap[sameLength].push(parseInt(checkNums));
     })
     for(let sameLength in checkNumsMap){
-        option["lastNumberSameLength"+sameLength]=parseInt(sameLength);
         option["laskNumberCheckNums"+sameLength]=checkNumsMap[sameLength];
     }
 
+    $(".check-paragraph:checked").each(function(){
+        let paragraphValue=$(this).val().split("-");
+        let startValue=parseInt(paragraphValue[0]);
+        let paragraphLength=parseInt(paragraphValue[1]);
+        option["paragraphCount"+startValue]=paragraphLength
+    })
 
 
 

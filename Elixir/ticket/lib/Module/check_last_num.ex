@@ -27,11 +27,6 @@ defmodule CheckLastNum do
      checkNumsIsOverflowCheckNum(nums,sameLength,checkNums,(tl tlNums),tlCheckNums,count)
   end
 
-
-  def checkLastNum(_,sameLength,_) when (sameLength == nil) do
-    true
-  end
-
   def checkLastNum(_,_,checkNums) when (checkNums == nil) do
     true
   end
