@@ -64,7 +64,8 @@ defmodule Main do
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,0,option["paragraphCount0"]) &&
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,1,option["paragraphCount1"]) &&
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2"]) &&
-      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"])
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"]) &&
+      SumCheck.sumCheck(checkNums,option["min"],option["max"])
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client) do

@@ -91,6 +91,9 @@ handleCheckStart=()=>{
         option["paragraphCount"+startValue]=paragraphLength
     })
 
+    // 最小值最大值
+    option.min=parseInt($("#largerThan").val())
+    option.max=parseInt($("#smallerThan").val())
 
 
 
