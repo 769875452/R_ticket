@@ -8,6 +8,9 @@ defmodule CheckInclude do
   end
 
   def checkIsInclude(_,checkNums,_,_,atLeast) when checkNums == [] do
+  if(!atLeast) do
+    IO.puts "check is include ---false"
+  end
     atLeast
   end
 
@@ -24,11 +27,12 @@ defmodule CheckInclude do
   end
 
   def checkInclude(_,checkNums,_,atLeast) when is_nil checkNums do
-    atLeast
+    true
   end
 
 
   def checkInclude(nums,checkNums,maxCount,atLeast) when is_nil(atLeast) do
+    IO.puts "快四十了?"
     checkIsInclude(nums,checkNums,0,maxCount,true)
   end
 

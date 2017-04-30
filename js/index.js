@@ -100,7 +100,7 @@ handleCheckStart=()=>{
 
     if($("input[name='simpleNums']:checked").val()){
         let checkNumsArr=$("#inputSelectNumber").val().split(",");
-        checkNumsArr.map((num)=>{
+        checkNumsArr=checkNumsArr.map((num)=>{
             return parseInt(num)
         });
         checkNumsArr.sort((a,b)=>{
