@@ -6,6 +6,7 @@ defmodule ContinumCheck do
     end
 
     def nextContinum(count,_,continumLength) when count >=continumLength do
+        IO.puts "check continum false"
         false
     end
 

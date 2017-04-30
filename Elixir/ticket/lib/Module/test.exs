@@ -19,4 +19,5 @@
 #IO.puts CheckParagraphNumsCount.checkParagraphNumsCount([1,2,11,12,13],1,3)
 #Main.main()
 #IO.puts OddLength.checkIsOddOverLength([6,4,3,2,1],2)
-IO.puts CheckParagraphNumsCount.checkParagraphNumsCount([5,3,2],0,2)
+#IO.puts CheckParagraphNumsCount.checkParagraphNumsCount([5,3,2],0,2)
+IO.puts CheckInclude.checkInclude([9,8,7,6,5,10,3],[5,4,3],3)

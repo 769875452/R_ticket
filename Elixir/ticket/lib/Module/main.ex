@@ -1,7 +1,7 @@
 defmodule Main do
   @moduledoc false
 
-  @checkNumsLength 2
+  @checkNumsLength 6
   @result []
 
 
@@ -65,7 +65,8 @@ defmodule Main do
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,1,option["paragraphCount1"]) &&
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2"]) &&
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"]) &&
-      SumCheck.sumCheck(checkNums,option["min"],option["max"])
+      SumCheck.sumCheck(checkNums,option["min"],option["max"]) &&
+      CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"])
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client) do
@@ -75,6 +76,7 @@ defmodule Main do
     if(checkLoop(tempNums,option)) do
         {status, jsonResult} = JSON.encode(tempNums)
          client |> Socket.Web.send! ({ :text, jsonResult })
+       else
     end
 #     IO.puts lengtsh result
      nextNums=getNextNums(checkNums,allNums,true)
@@ -196,7 +198,7 @@ defmodule Main do
 
 
 
-  def setNumToAll(allNums,excludeNums,now) when now >30 do
+  def setNumToAll(allNums,excludeNums,now) when now >37 do
     allNums
   end
 

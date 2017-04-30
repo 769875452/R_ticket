@@ -10,6 +10,10 @@ defmodule SumCheck do
     getSumStep nums,0
   end
 
+  def sumCheck(nums,min,max) when (is_nil(min) and is_nil(max)) do
+  true
+  end
+
   def sumCheck(nums,min,max) when max ==nil do
      ((getSum nums) > min)
   end

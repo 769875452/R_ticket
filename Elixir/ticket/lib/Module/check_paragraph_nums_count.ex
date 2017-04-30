@@ -6,6 +6,7 @@ defmodule CheckParagraphNumsCount do
   end
 
   def nextCheckInRange(_,_,maxCount,_,count) when count >=maxCount do
+    IO.puts "check in range false"
     false
   end
 

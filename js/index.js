@@ -4,7 +4,7 @@ var test=new Rticket.ticket();
 var validNumsArr=[];
 var allNumsLength=1;
 var isContinue=false;
-
+var getdataTimer=0;
 websocket = new WebSocket("ws://127.0.0.1:8082/");
 websocket.onopen = function(evt) {
     console.log("websocket success")
@@ -13,23 +13,19 @@ websocket.onclose = function(evt) {
     console.log("websocket fail")
 };
 websocket.onmessage = function(evt) {
-    if(evt.data=="endOne"){
-        console.log("完成一个")
-        getdata()
-    }else{
-        validNumsArr.push(JSON.parse(evt.data));
-    }
+    validNumsArr.push(JSON.parse(evt.data));
     // getdata()
 };
 websocket.onerror = function(evt) {
     console.log("websocket error",evt.data);
 };
 handleCheckStart=()=>{
-    // allNums=[];
-    // checkNumsLength=$("input[name='checkNumers']:checked").val() || 5;
-    // for(let i=1;i<38;i++){
-    //     allNums.push(i);
-    // }
+
+    window.clearInterval(getdataTimer)
+    getdataTimer=window.setInterval(()=>{
+        getdata()
+    },5000)
+
     let excludeNums=[]
     $('input[name="notInNums"]:checked').each(function(){
         excludeNums.push(parseInt($(this).val()));
@@ -92,14 +88,31 @@ handleCheckStart=()=>{
     })
 
     // 最小值最大值
-    option.min=parseInt($("#largerThan").val())
-    option.max=parseInt($("#smallerThan").val())
+    if($("#largerThan").val()){
+        option.min=parseInt($("#largerThan").val())
+    }
+    if($("#smallerThan").val()){
+        option.max=parseInt($("#smallerThan").val())
+    }
+
+
+
+    if($("input[name='simpleNums']:checked").val()){
+        let checkNumsArr=$("#inputSelectNumber").val().split(",");
+        checkNumsArr.map((num)=>{
+            return parseInt(num)
+        });
+        checkNumsArr.sort((a,b)=>{
+            return b-a
+        })
+        option.checkInclude=checkNumsArr;
+        option.includeLength=parseInt($("input[name='simpleNums']:checked").val())
+    }
 
 
 
 
-
-
+    console.log(option)
     websocket.send(JSON.stringify(option))
     // $("input[name='notInNums_1']:checked").each(function(){
     //     let notInNumsValue=$(this).val().split("-");

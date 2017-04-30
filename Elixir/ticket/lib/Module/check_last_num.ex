@@ -6,6 +6,7 @@ defmodule CheckLastNum do
   end
 
     def checkNumsIsOverflowCheckNum(nums,sameLength,checkNums,tlNums,tlCheckNums,count) when count >= sameLength do
+      IO.puts "check last num false"
       false
     end
 

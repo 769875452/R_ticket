@@ -7,6 +7,7 @@ defmodule OddLength do
 
 
   def checkIsOddOverLengthByIndex(_,maxLength,count) when count>=maxLength do
+        IO.puts "check is odd false"
      false
   end
 
