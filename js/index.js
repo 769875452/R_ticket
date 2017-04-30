@@ -5,7 +5,7 @@ var validNumsArr=[];
 var allNumsLength=1;
 var isContinue=false;
 var getdataTimer=0;
-websocket = new WebSocket("ws://127.0.0.1:8082/");
+websocket = new WebSocket("ws://106.184.5.171:8082/");
 websocket.onopen = function(evt) {
     console.log("websocket success")
 };
@@ -46,7 +46,7 @@ handleCheckStart=()=>{
     console.log(excludeNums)
 
 
-    //连续数
+    //连续�?
     console.log($("input[name='checkNumbers']:checked").val())
     if($("input[name='checkNumbers']:checked").val()){
         let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
@@ -87,7 +87,7 @@ handleCheckStart=()=>{
         option["paragraphCount"+startValue]=paragraphLength
     })
 
-    // 最小值最大值
+    // �?小�?�最大�??
     if($("#largerThan").val()){
         option.min=parseInt($("#largerThan").val())
     }
