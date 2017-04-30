@@ -66,7 +66,8 @@ defmodule Main do
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2"]) &&
       CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"]) &&
       SumCheck.sumCheck(checkNums,option["min"],option["max"]) &&
-      CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"])
+      CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"]) &&
+      CheckInclude.isAtLeastOne(checkNums,option["includeNums"],option["isAtLeast"])
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client) do

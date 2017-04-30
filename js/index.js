@@ -108,6 +108,9 @@ handleCheckStart=()=>{
         option.checkInclude=checkNumsArr;
         option.includeLength=parseInt($("input[name='simpleNums']:checked").val())
     }
+    if($("#mustHaveCheckbox:checked").val()){
+        options.isAtLeast=true
+    }
 
 
 
