@@ -81,10 +81,10 @@
 
 </div>
 
-<div class="filter-result">
-	已筛选出<span class="filter-result-length"></span>个
-	剩余<span class="filter-result-have"></span>个
-</div>
+<!--<div class="filter-result">-->
+	<!--已筛选出<span class="filter-result-length"></span>个-->
+
+<!--</div>-->
 
 <button type="button" class="check-start btn btn-primary btn-default">
 	筛选结果
@@ -105,7 +105,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">筛选结果,当前有(<span id="numsLength"></span>条)</h4>
+				<h4 class="modal-title">筛选结果,当前有(<span id="numsLength"></span>条)  剩余<span class="filter-result-have"></span>个待检查</h4>
 			</div>
 			<div class="modal-body modal-result">
 				<div class="ticket-page"></div>
@@ -113,7 +113,7 @@
 				</table>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>
+				<!--<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>-->
 				<button type="button" class="check-stop btn btn-danger btn-default" >
 					停止筛选
 				</button>
@@ -147,23 +147,22 @@
 
 
 	$(".check-start").click(function(){
-		if(!isContinue){
-			isContinue=true;
-			pageobj.pagenum=1;
-			$(".result-table").html("");
-			$(".filter-result").show();
-			isContinue=true;
-			validNumsArr=[];
-			handleCheckStart();
-		}
+		pageobj.pagenum=1;
+		isContinue=true;
+		$(".result-table").html("");
+//		$(".filter-result").show();
+		validNumsArr=[];
+		websocket && websocket.close()
+		connectWS();
 		$("#numsResult").modal();
 	})
 	$(".btn-continue").click(function(){
-		isContinue=true;
 		mainLoop(validNumsArr[validNumsArr.length-1])
 	})
 	$(".check-stop").click(function(){
+		websocket.close()
 		isContinue=false;
+		getdata();
 	})
 
 	//排除数字
@@ -252,7 +251,9 @@
 	pageobj.perpage=50;
 	function getdata(){
 		$(".result-table").html("");
+		$(".filter-result-have").html(allNumsLength)
 		let validNumsArrLen=validNumsArr.length
+		$("#numsLength").html(validNumsArrLen);
 		for(let i=(pageobj.pagenum-1)*pageobj.perpage;
 			i<(pageobj.pagenum)*pageobj.perpage && i<validNumsArrLen;
 			i++){

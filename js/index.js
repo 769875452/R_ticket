@@ -1,32 +1,40 @@
-var checkNumsLength=0;
+var checkNumsLength=7;
 var allNums=[];
 var test=new Rticket.ticket();
 var validNumsArr=[];
 var allNumsLength=1;
 var isContinue=false;
 var getdataTimer=0;
-// websocket = new WebSocket("ws://106.184.5.171:8082/");
-websocket = new WebSocket("ws://localhost:8082/");
-websocket.onopen = function(evt) {
-    console.log("websocket success")
-};
-websocket.onclose = function(evt) {
-    console.log("websocket fail")
-};
-websocket.onmessage = function(evt) {
-    validNumsArr.push(JSON.parse(evt.data));
-    // getdata()
-};
-websocket.onerror = function(evt) {
-    console.log("websocket error",evt.data);
-};
-handleCheckStart=()=>{
+var websocket=null;
+function connectWS(){
+ websocket = new WebSocket("ws://106.184.5.171:8082/");
+//    websocket = new WebSocket("ws://192.168.3.30:8082/");
+    websocket.onopen = function(evt) {
+        console.log("websocket success")
+        handleCheckStart()
+    };
+    websocket.onclose = function(evt) {
+        console.log("websocket fail")
+    };
+    websocket.onmessage = function(evt) {
+        if(evt.data != "false"){
+            validNumsArr=validNumsArr.concat(JSON.parse(evt.data));
+            allNumsLength=allNumsLength-1000
+        }
 
+
+    };
+    websocket.onerror = function(evt) {
+        console.log("websocket error",evt.data);
+        isContinue=false;
+        alert("����������")
+    };
+}
+handleCheckStart=()=>{
     window.clearInterval(getdataTimer)
     getdataTimer=window.setInterval(()=>{
         getdata()
-    },5000)
-
+    },1000)
     let excludeNums=[]
     $('input[name="notInNums"]:checked').each(function(){
         excludeNums.push(parseInt($(this).val()));
@@ -41,29 +49,24 @@ handleCheckStart=()=>{
             })
             excludeNums.push(thisNum);
         }
+        excludeNums=excludeNums.sort((a,b)=>{
+            return a-b;
+        })
     });
     let option={};
     option.excludeNums=excludeNums;
     console.log(excludeNums)
-
-
-    //连续�?
     console.log($("input[name='checkNumbers']:checked").val())
     if($("input[name='checkNumbers']:checked").val()){
         let valueArr=$("input[name='checkNumbers']:checked").val().split("-");
         option.continumCheckValue=parseInt(valueArr[0])
-        console.log(option)
     }
-
-    //奇数偶数
     if($("input[name='oddNumbres']:checked").val()){
         option.oddNumbresCheckValue=parseInt($("input[name='oddNumbres']:checked").val())
     }
     if($("input[name='evenNumbres']:checked").val()){
         option.evenNumbresCheckValue=parseInt($("input[name='evenNumbres']:checked").val())
     }
-
-    //尾数排除
     let checkNumsMap={};
     $('.notInNums:checked').each(function(){
         let notInNumsValue=$(this).val().split("-");
@@ -80,24 +83,18 @@ handleCheckStart=()=>{
     for(let sameLength in checkNumsMap){
         option["laskNumberCheckNums"+sameLength]=checkNumsMap[sameLength];
     }
-
     $(".check-paragraph:checked").each(function(){
         let paragraphValue=$(this).val().split("-");
         let startValue=parseInt(paragraphValue[0]);
         let paragraphLength=parseInt(paragraphValue[1]);
         option["paragraphCount"+startValue]=paragraphLength
     })
-
-    // �?小�?�最大�??
     if($("#largerThan").val()){
         option.min=parseInt($("#largerThan").val())
     }
     if($("#smallerThan").val()){
         option.max=parseInt($("#smallerThan").val())
     }
-
-
-
     if($("input[name='simpleNums']:checked").val()){
         let checkNumsArr=$("#inputSelectNumber").val().split(",");
         checkNumsArr=checkNumsArr.map((num)=>{
@@ -112,110 +109,82 @@ handleCheckStart=()=>{
     if($("#mustHaveCheckbox:checked").val()){
         option.isAtLeast=true
     }
+    allNums=[];
+    for(let i=1,j=0;i<=38;i++){
 
+        if(excludeNums.length>j && excludeNums[j]==i){
+            j++;
+        }else{
+            allNums.push(i)
+        }
+    }
 
-
-
+    allNumsLength=1;
+    for(let i=0;i<checkNumsLength;i++){
+        allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
+    }
+    console.log("allNumsLength",allNumsLength)
     console.log(option)
     websocket.send(JSON.stringify(option))
-    // $("input[name='notInNums_1']:checked").each(function(){
-    //     let notInNumsValue=$(this).val().split("-");
-    //     let notIncludeNum=notInNumsValue[1];
-    //     let allNumsLength=allNums.length;
-    //     for(let i=0;i<allNumsLength;i++){
-    //         if(allNums[i]%10==notIncludeNum){
-    //             allNums.splice(i,1);
-    //             break;
-    //         }
-    //     }
-    // });
-    //
-    // let numsArr=[];
-    // for(let i=0;i<checkNumsLength;i++){
-    //     numsArr[i]=allNums[i];
-    // }
-    //
-    // allNumsLength=1;
-    // for(let i=0;i<checkNumsLength;i++){
-    //     allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
-    // }
-    // $(".filter-result-have").html(allNumsLength)
-    // $(".filter-result-length").html(0);
-    // mainLoop(numsArr);
+
+    checkNumsLength=7;
+
+    let numsArr=[];
+    for(let i=0;i<checkNumsLength;i++){
+        numsArr[i]=allNums[allNums.length-(checkNumsLength*3)+i];
+    }
+    //mainLoop(numsArr,option);
+
 }
 
 
 
-function mainLoop(numsArr){
+function mainLoop(numsArr,option){
     allNumsLength--;
     if(!numsArr ||!isContinue){
     }else{
-        $(".filter-result-length").html(validNumsArr.length);
-        $(".filter-result-have").html(allNumsLength)
-        $("#numsLength").html(validNumsArr.length);
-        pageobj.setalldatacount(validNumsArr.length);
-        if(validNumsArr.length>=(pageobj.pagenum-1)*pageobj.perpage && validNumsArr.length<(pageobj.pagenum)*pageobj.perpage){
-            getdata();
-        }
         window.setTimeout(function(){
-            numsArr=getNestNumAndCheck(numsArr)
+            numsArr=getNestNumAndCheck(numsArr,option)
         },0)
     }
 }
-function getNestNumAndCheck(numsArr){
-    let isValid=checkBySelect(numsArr);
+function getNestNumAndCheck(numsArr,option){
+    let isValid=checkBySelect(numsArr,option);
     if(isValid) {
         validNumsArr.push(numsArr.concat([]))
     }
     numsArr=handleAddNumByIndex(numsArr,(checkNumsLength-1));
-    mainLoop(numsArr);
+    mainLoop(numsArr,option );
 }
 
-checkBySelect=(numsArr)=>{
+checkBySelect=(numsArr,option)=>{
     test.setNumsArr(numsArr)
     let isValid=true;
-    if(isValid && $("input[name='mustHave']:checked").val()){
-        let checkNumsArr=$("#inputSelectNumber").val().split(",");
-        isValid=test.checkIsHave(checkNumsArr);
+
+    if(isValid &&  option.continumCheckValue){
+        isValid=test.checkIsAnyContinuum(option.continumCheckValue,1)
     }
 
-    //�����ų�
-    if(isValid && $("input[name='oddNumbres']:checked").val()){
-        isValid=test.checkOddNumbers(parseInt($("input[name='oddNumbres']:checked").val()));
+    if(isValid && option.oddNumbresCheckValue){
+        isValid=test.checkOddNumbers(option.oddNumbresCheckValue);
     }
-    //ż���ų�
-    if(isValid && $("input[name='evenNumbres']:checked").val()){
-        isValid=test.checkEvenNumbers(parseInt($("input[name='evenNumbres']:checked").val()));
+    if(isValid && option.evenNumbresCheckValue){
+        isValid=test.checkEvenNumbers(option.evenNumbresCheckValue);
     }
 
-    //β��ɸѡ
-    if(isValid){
-        let checkNumsMap={};
-        $('.notInNums:checked').each(function(){
-            let notInNumsValue=$(this).val().split("-");
-            let sameLength=notInNumsValue[0];
-            if(!checkNumsMap[sameLength]){
-                checkNumsMap[sameLength]=[]
-            }
-            let checkNums=notInNumsValue[1];
-            checkNumsMap[sameLength].push(parseInt(checkNums));
-        })
-        for(let checkNum in checkNumsMap){
-            isValid=test.checkLastNumber(checkNum,checkNumsMap[checkNum])
-            if(!isValid){
-                break;
-            }
-        }
+    if(isValid && option.laskNumberCheckNums2) {
+        isValid=test.checkLastNumber(2,option.laskNumberCheckNums2)
     }
-    if(isValid && $("#largerThan").val()){
-        isValid=test.checkSumNumbers($("#largerThan").val())
+    if(isValid && option.laskNumberCheckNums3) {
+        isValid=test.checkLastNumber(2,option.laskNumberCheckNums3)
     }
-    if(isValid && $("#smallerThan").val()){
-        isValid=!test.checkSumNumbers($("#smallerThan").val()-1)
+    if(isValid && option.min){
+        isValid=test.checkSumNumbers(option.min)
+    }
+    if(isValid && option.max){
+        isValid=!test.checkSumNumbers(option.max)
     }
 
-
-    //�ֶ�ɸѡ
     if(isValid){
         $(".check-paragraph:checked").each(function(){
             let paragraphValue=$(this).val().split("-");
@@ -227,9 +196,13 @@ checkBySelect=(numsArr)=>{
             }
         })
     }
-    if(isValid && $("input[name='simpleNums']:checked").val()){
-        let checkNumsArr=$("#inputSelectNumber").val().split(",");
-        isValid=test.checkParagraph([{paragraphLength:parseInt($("input[name='simpleNums']:checked").val()),paragraphNums:checkNumsArr,isInclude:true}])
+
+    if(isValid && option.includeLength){
+        isValid=test.checkParagraph([{paragraphLength:option.includeLength,paragraphNums:option.includeNums,isInclude:true}])
+
+        if(isValid && option.isAtLeast){
+            isValid=test.checkIsHave(option.includeNums);
+        }
     }
     return isValid;
 }

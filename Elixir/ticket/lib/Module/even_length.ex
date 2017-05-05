@@ -6,7 +6,6 @@ defmodule EvenLength do
   end
 
   def checkIsEvenOverLengthByIndex(_,maxLength,count) when count>=maxLength do
-     IO.puts "check is even false"
      false
   end
 

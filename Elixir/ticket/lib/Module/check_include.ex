@@ -3,13 +3,11 @@ defmodule CheckInclude do
 
 
   def checkIsInclude(_,_,count,maxCount) when count>=maxCount do
-    IO.puts "check is include false"
     false
   end
 
   def checkIsInclude(_,checkNums,_,_,atLeast) when checkNums == [] do
   if(!atLeast) do
-    IO.puts "check is include ---false"
   end
     atLeast
   end

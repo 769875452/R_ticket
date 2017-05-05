@@ -39,16 +39,15 @@ defmodule Main do
 
     spawn(
         fn ->
-            mainLoop (getStartNums (tl tlNums),[],1),[],allNums,(hd tlNums),option,client
+            mainLoop (getStartNums (tl tlNums),[],1),[],allNums,(hd tlNums),option,client,0
          end
      )
      startNewLoop allNums,(tl tlNums),option,client
   end
-
   def startNewLoop(allNums,option,client) do
     spawn(
         fn ->
-         mainLoop (getStartNums (tl allNums),[],1),[],allNums,(hd allNums),option,client
+         mainLoop (getStartNums (tl allNums),[],1),[],allNums,(hd allNums),option,client,0
          end
      )
      startNewLoop allNums,(tl allNums),option,client
@@ -69,22 +68,40 @@ defmodule Main do
       CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"],option["isAtLeast"])
   end
 
-  def mainLoop(checkNums,result,allNums,staticNum,option,client) do
+  def mainLoop(checkNums,result,allNums,staticNum,option,client,resultLength) do
     tempNums=checkNums++[staticNum]
-     result=result ++ [tempNums]
 #     iOPUTLIST (checkNums++[staticNum])
+    result=
     if(checkLoop(tempNums,option)) do
-        {status, jsonResult} = JSON.encode(tempNums)
-         client |> Socket.Web.send! ({ :text, jsonResult })
-       else
+        result ++ [tempNums]
+        else
+        result
     end
+    resultLength=
+    if(resultLength == 3000) do
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
+        0
+        else
+        resultLength+1
+    end
+
+    result=
+    if(resultLength == 0) do
+        []
+        else
+        result
+    end
+#    IO.puts resultLength
 #     IO.puts lengtsh result
      nextNums=getNextNums(checkNums,allNums,true)
      result=
      if (nextNums)!=false do
-       mainLoop nextNums,(result),allNums,staticNum,option,client
+       mainLoop nextNums,(result),allNums,staticNum,option,client,resultLength
        else
 #        iOPUTLIST @result
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
        result
      end
      result
@@ -211,9 +228,6 @@ defmodule Main do
   end
   def setNumToAll(allNums,excludeNums,now) do
 #  iOPUTLIST excludeNums;
-    IO.puts is_integer(now)
-    IO.puts is_integer(hd excludeNums)
-    IO.puts now ==(hd excludeNums)
     setNumToAll (allNums ++ [now]),excludeNums,now+1
   end
 
