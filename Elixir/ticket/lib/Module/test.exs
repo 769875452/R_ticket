@@ -20,4 +20,4 @@
 #Main.main()
 #IO.puts OddLength.checkIsOddOverLength([6,4,3,2,1],2)
 #IO.puts CheckParagraphNumsCount.checkParagraphNumsCount([5,3,2],0,2)
-IO.puts CheckInclude.checkInclude([9,8,7,6,5,10,3],[5,4,3],3)
+IO.puts CheckInclude.checkInclude([4,3,2,1],[4,3,2,1],2,nil)

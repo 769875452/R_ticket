@@ -2,13 +2,24 @@ defmodule CheckInclude do
   @moduledoc false
 
 
+<<<<<<< HEAD
   def checkIsInclude(_,_,count,maxCount) when count>=maxCount do
+=======
+  def checkIsInclude(_,_,count,maxCount,_) when count>=maxCount do
+    IO.puts "check is include false"
+>>>>>>> origin/master
     false
   end
 
   def checkIsInclude(_,checkNums,_,_,atLeast) when checkNums == [] do
+<<<<<<< HEAD
   if(!atLeast) do
+=======
+    atLeast
+>>>>>>> origin/master
   end
+
+  def checkIsInclude(nums,_,_,_,atLeast) when nums == [] do
     atLeast
   end
 
@@ -30,7 +41,6 @@ defmodule CheckInclude do
 
 
   def checkInclude(nums,checkNums,maxCount,atLeast) when is_nil(atLeast) do
-    IO.puts "快四十了?"
     checkIsInclude(nums,checkNums,0,maxCount,true)
   end
 
