@@ -23,6 +23,9 @@ function connectWS(){
             allNumsLength=validNumsArrBk.length;
             getdata();
             handleCheckStart();
+            validNumsArrBk=validNumsArrBk.filter((num,i)=>{
+                return i>3000;
+            })
         }else{
             allNumsLength=(allNumsLength>3000?(allNumsLength-3000):0)
         }
@@ -122,16 +125,17 @@ handleCheckStart=()=>{
         }
     }
 
-    allNumsLength=1;
-    for(let i=0;i<checkNumsLength && (allNums.length-i)>7;i++){
-        allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
-    }
 
 
     if(validNumsArrBk.length>0){
         option.allNumsArray=validNumsArrBk.filter((num,i)=>{
             return i<3000;
         });
+    }else{
+        allNumsLength=1;
+        for(let i=0;i<checkNumsLength && (allNums.length-i)>7;i++){
+            allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
+        }
     }
     console.log("allNums",allNums)
     console.log("allNumsLength",allNumsLength)
