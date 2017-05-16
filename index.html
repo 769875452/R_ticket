@@ -87,8 +87,13 @@
 <!--</div>-->
 
 <button type="button" class="check-start btn btn-primary btn-default">
-	筛选结果
+	筛选结果(未清除则根据结果进行筛选)
 </button>
+
+<button type="button" class="check-clear btn btn-warning btn-default">
+	清除当前数据
+</button>
+
 <button type="button" class="check-stop btn btn-danger btn-default" >
 	停止筛选
 </button>
@@ -114,6 +119,11 @@
 			</div>
 			<div class="modal-footer">
 				<!--<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>-->
+
+				<button type="button" class="check-clear btn btn-warning btn-default">
+					清除当前数据
+				</button>
+
 				<button type="button" class="check-stop btn btn-danger btn-default" >
 					停止筛选
 				</button>
@@ -149,9 +159,10 @@
 	$(".check-start").click(function(){
 		pageobj.pagenum=1;
 		isContinue=true;
+		validNumsArrBk=validNumsArr.concat([]);
+		validNumsArr=[];
 		$(".result-table").html("");
 //		$(".filter-result").show();
-		validNumsArr=[];
 		websocket && websocket.close()
 		connectWS();
 		$("#numsResult").modal();
@@ -163,6 +174,9 @@
 		websocket.close()
 		isContinue=false;
 		getdata();
+	})
+	$(".check-clear").click(function(){
+		validNumsArr=[];
 	})
 
 	//排除数字

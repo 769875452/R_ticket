@@ -7,7 +7,12 @@ defmodule Main do
 
   def main(option,client) do
     allNums=setNumToAll([],option["excludeNums"],1)
+    if(is_nil(option["allNumsArray"]))do
     startNewLoop(allNums,option,client)
+    else
+    loopByArray(option["allNumsArray"],option,client,[],0)
+    end
+
   end
 
   def main do
@@ -67,6 +72,45 @@ defmodule Main do
       SumCheck.sumCheck(checkNums,option["min"],option["max"]) &&
       CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"],option["isAtLeast"])
   end
+
+
+
+  def loopByArray(allNumsArr,_,client,result,_) when allNumsArr==[] do
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
+  end
+
+  def loopByArray(allNumsArr,option,client,result,resultLength) do
+    result=
+    if(checkLoop((hd allNumsArr),option)) do
+        result ++ [hd allNumsArr]
+        else
+        result
+    end
+
+    resultLength=
+    if(resultLength == 3000) do
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
+        0
+        else
+        resultLength+1
+    end
+    result=
+    if(resultLength == 0) do
+        []
+        else
+        result
+    end
+    loopByArray((tl allNumsArr),option,client,result,resultLength)
+
+  end
+
+
+
+
+
+
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client,resultLength) do
     tempNums=checkNums++[staticNum]
