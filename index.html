@@ -81,10 +81,9 @@
 
 </div>
 
-<!--<div class="filter-result">-->
-	<!--已筛选出<span class="filter-result-length"></span>个-->
-
-<!--</div>-->
+<div class="filter-result">
+	已筛选出<span class="filter-result-length">0</span>个
+</div>
 
 <button type="button" class="check-start btn btn-primary btn-default">
 	筛选结果(未清除则根据结果进行筛选)
@@ -162,7 +161,7 @@
 		validNumsArrBk=validNumsArr.concat([]);
 		validNumsArr=[];
 		$(".result-table").html("");
-//		$(".filter-result").show();
+		$(".filter-result").show();
 		websocket && websocket.close()
 		connectWS();
 		$("#numsResult").modal();
@@ -177,6 +176,7 @@
 	})
 	$(".check-clear").click(function(){
 		validNumsArr=[];
+		getdata();
 	})
 
 	//排除数字
@@ -265,6 +265,7 @@
 	pageobj.perpage=50;
 	function getdata(){
 		$(".result-table").html("");
+		$(".filter-result-length").html(validNumsArr.length);
 		$(".filter-result-have").html(allNumsLength)
 		let validNumsArrLen=validNumsArr.length
 		$("#numsLength").html(validNumsArrLen);
