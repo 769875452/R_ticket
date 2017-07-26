@@ -3,28 +3,291 @@
 
 <!DOCTYPE html>
 <html lang="zh-CN" class="work">
-<head>
-    <meta charset="utf-8">
-	
-    <script src="./R_ticket.js"></script>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="css/Rpage.css" type="text/css" />
+
+	<link href="./css/bootstrap.css" rel="stylesheet">
+
+	<link href="./css/index.css" rel="stylesheet">
+
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script language="JavaScript" src="./js/Rpage.js"></script>
+
+	<script src="./js/R_ticket.js"></script>
 </head>
 <body>
+<div class="check-title"> 筛选数量(不选的话默认为7)</div>
+<div class="radio-numbers">
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="2"> 37选2
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="3"> 37选3
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="4"> 37选4
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="5"> 37选5
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="6"> 37选6
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="7"> 37选7
+	</label>
+</div>
+
+<div class="check-title">排除数字</div>
+<div class="checkbox-not-in-numbers">
+</div>
+<div class="check-title">连号删除</div>
+<div class="radio-inline-continuity">
+</div>
+<div class="check-title">奇偶数排除(超出个数则排除)</div>
+<div class="checkbox-not-odd">
+	<div class="select-row small">奇数(个):</div>
+</div>
+<div class="checkbox-not-even">
+	<div class="select-row small">偶数(个):</div>
+</div>
+
+<div class="checkbox-not-last">
+	<div class="check-title">尾数筛选</div>
+</div>
+
+<div class="checkbox-paragraph">
+	<div class="check-title">分段筛选</div>
+</div>
+
+<div class="checkbox-sum">
+	<div class="check-title">和值筛选</div>
+
+	<div class="form-group flex-group">
+		<label class="flex-group-title" for="largerThan">大于</label>
+		<input type="text" class="form-control" id="largerThan" placeholder="请输入">
+	</div>
+
+	<div class="form-group flex-group">
+		<label class="flex-group-title" for="smallerThan">小于</label>
+		<input type="text" class="form-control" id="smallerThan" placeholder="请输入">
+	</div>
+</div>
+
+<div class="check-title">独立号码筛选(以逗号分隔多个数)</div>
+<div class="form-group flex-group">
+	<label class="flex-group-title" for="inputSelectNumber">输入号码</label>
+	<input type="text" class="form-control" id="inputSelectNumber" placeholder="请输入">
+</div>
+<div class="haveNumber">
+	排除含有(个)的数
+</div>
+<div class="mustHave">
+	<input type="checkbox" name="mustHave" id="mustHaveCheckbox">
+	<label class="flex-group-title" for="mustHaveCheckbox">至少含有一个数以上</label>
+
+</div>
+
+<div class="filter-result">
+	已筛选出<span class="filter-result-length">0</span>个
+</div>
+
+<button type="button" class="check-start btn btn-primary btn-default">
+	筛选结果(未清除则根据结果进行筛选)
+</button>
+
+<button type="button" class="check-clear btn btn-warning btn-default">
+	清除当前数据
+</button>
+
+<button type="button" class="check-stop btn btn-danger btn-default" >
+	停止筛选
+</button>
+
+
+
+
+
+
+
+
+<div class="modal fade" tabindex="-1" id="numsResult" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">筛选结果,当前有(<span id="numsLength"></span>条)  剩余<span class="filter-result-have"></span>个待检查</h4>
+			</div>
+			<div class="modal-body modal-result">
+				<div class="ticket-page"></div>
+				<table class="result-table table table-bordered table-hover table-condensed table-striped">
+				</table>
+			</div>
+			<div class="modal-footer">
+				<!--<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>-->
+
+				<button type="button" class="check-clear btn btn-warning btn-default">
+					清除当前数据
+				</button>
+
+				<button type="button" class="check-stop btn btn-danger btn-default" >
+					停止筛选
+				</button>
+				<button type="button" class="btn btn-primary result-get-csv">导出结果</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<a class="download-a" download="结果.csv"></a>
+
 
 </body>
 </html>
 <script>
 
-var test=new Rticket.ticket([1,2,3,4,6,7,8,12,13,14])
-console.log("验证连续数2",test.checkIsContinuum(2))
-console.log("验证连续数3",test.checkIsContinuum(3))
-console.log("验证连续数4",test.checkIsContinuum(4))
-console.log("验证连续数5",test.checkIsContinuum(5))
-console.log("验证是否出现",test.checkParagraph([
-	{paragraphLength:2,paragraphNums:[1,5,10],isInclude:true},
-	{paragraphLength:4,paragraphNums:[2,4,8],isInclude:true},
-	{paragraphLength:1,paragraphNums:[3,5,6],isInclude:false},
-]))
+
+	$(".result-get-csv").click(function(e){
+		var str=","+validNumsArr.map((result)=>{
+			return result.map((num)=>{
+				console.log(num)
+				return num+"";
+			})+"\n";
+		})
+		str=encodeURIComponent(str);
+		$(".download-a").attr("href","data:text/csv;charset=utf-8,\ufeff"+str);
+		$(".download-a")[0].click();
+	})
 
 
+	$(".check-start").click(function(){
+		pageobj.pagenum=1;
+		isContinue=true;
+		validNumsArrBk=validNumsArr.concat([]);
+		validNumsArr=[];
+		$(".result-table").html("");
+		$(".filter-result").show();
+		websocket && websocket.close()
+		connectWS();
+		$("#numsResult").modal();
+	})
+	$(".btn-continue").click(function(){
+		mainLoop(validNumsArr[validNumsArr.length-1])
+	})
+	$(".check-stop").click(function(){
+		websocket.close()
+		isContinue=false;
+		getdata();
+	})
+	$(".check-clear").click(function(){
+		validNumsArr=[];
+		getdata();
+	})
+
+	//排除数字
+	for(let i=1;i<38;i++){
+		$(".checkbox-not-in-numbers").append('<label class="checkbox-inline"> ' +
+				'<input type="checkbox" id="not-in-numbers-'+i+'" name="notInNums" value="'+i+'">  ' +i+
+				'</label>');
+	}
+
+	//连号删除
+	for(var i=2;i<=6;i++){
+		$(".radio-inline-continuity").append('<label class="radio-inline"> ' +
+				'<input type="radio" name="checkNumbers" value="'+i+'-1"> '+i+'连号删除 ' +
+				'</label>')
+	}
+
+	//奇偶数删除
+	for(var i=1;i<=7;i++){
+		var oddNumberDiv='<label class="radio-inline"> ' +
+				'<input type="radio" name="oddNumbres" value="'+i+'">  ' +i+
+				'</label>';
+		$(".checkbox-not-odd").append(oddNumberDiv);
+		var evenNumberDiv='<label class="radio-inline"> ' +
+				'<input type="radio" name="evenNumbres" value="'+i+'">  ' +i+
+				'</label>';
+		$(".checkbox-not-even").append(evenNumberDiv);
+	}
+
+	//尾数筛选
+	for(var i=1;i<=3;i++){
+		let notInNumsGroupDiv='<div class="select-row"> ' +
+				'尾数有' +i+
+				'个(选择数)的排除</label>';
+		$(".checkbox-not-last").append(notInNumsGroupDiv);
+		for(var j=0;j<=9;j++){
+			let notInNumsCheckbox='<label class="checkbox-inline"> ' +
+					'<input class="notInNums" type="checkbox" name="notInNums_'+i+'" value="'+i+'-'+j+'">  ' +j+
+					'</label>';
+			$(".checkbox-not-last").append(notInNumsCheckbox);
+		}
+		$(".checkbox-not-last").append("<br>");
+	}
+
+	//分段筛选
+	for(var i=0;i<=3;i++){
+		let paragraphGroupDiv='<label class="checkbox-inline select-row"> ' +
+				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码(个)的排除'+
+				'</label>';
+		$(".checkbox-paragraph").append(paragraphGroupDiv);
+			let paragraphNumsCheckbox='<input type="text" class="check-paragraph" name="paragraphNums_'+i+'_start" >  ' +
+					'到' +
+					'<input type="text" class="check-paragraph" name="paragraphNums_'+i+'_end" >  个之间'
+			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
+		$(".checkbox-paragraph").append("<br>")
+	}
+	//独立号码筛选
+	for(var i=1;i<8;i++){
+		$(".haveNumber").append('<label class="radio-inline"> ' +
+				'<input type="radio" class="check-simple-number" name="simpleNums" value="'+i+'">  ' +i+
+				'个</label>')
+	}
+
+
+	var valueMap={};
+	$("input").click(function(e){
+		let name=$(this).attr("name");
+		let value=valueMap[name];
+		if(value==$(this).val()){
+			delete valueMap[name];
+			$(this)[0].checked=false
+		}else{
+			valueMap[name]=$(this).val()
+			$(this)[0].checked=true
+		}
+		$(this).attr("data-ischecked")
+	})
+
+
+
+	var pageobj=new Rpage.pageObj($(".ticket-page"));
+	pageobj.perpage=50;
+	function getdata(){
+		$(".result-table").html("");
+		$(".filter-result-length").html(validNumsArr.length);
+		$(".filter-result-have").html(allNumsLength)
+		let validNumsArrLen=validNumsArr.length
+		$("#numsLength").html(validNumsArrLen);
+		for(let i=(pageobj.pagenum-1)*pageobj.perpage;
+			i<(pageobj.pagenum)*pageobj.perpage && i<validNumsArrLen;
+			i++){
+			let tr=$('<tr></tr>').appendTo(".result-table");
+			validNumsArr[i].forEach((td)=>{
+				tr.append('<td>'+td+'</td>')
+			});
+		}
+		pageobj.setalldatacount(validNumsArr.length);
+	}
+	pageobj.setpagechange(
+			function(){
+				getdata();
+			}
+	);
 
 </script>
+<script type="text/javascript" src="js/index.js"></script>

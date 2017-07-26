@@ -1,0 +1,4007 @@
+
+ok
+
+09:26:35.801 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+09:26:35.801 [error] Process #PID<0.166.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.801 [error] Process #PID<0.182.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.801 [error] Process #PID<0.175.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.801 [error] Process #PID<0.178.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.801 [error] Process #PID<0.177.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.164.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.181.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.169.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.172.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.183.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.802 [error] Process #PID<0.176.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.803 [error] Process #PID<0.179.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.803 [error] Process #PID<0.168.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.803 [error] Process #PID<0.167.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.804 [error] Process #PID<0.180.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.804 [error] Process #PID<0.165.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.804 [error] Process #PID<0.174.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.805 [error] Process #PID<0.171.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.805 [error] Process #PID<0.170.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:35.805 [error] Process #PID<0.173.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+09:26:42.862 [error] Process #PID<0.195.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+09:26:42.998 [error] Process #PID<0.199.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.012 [error] Process #PID<0.198.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.026 [error] Process #PID<0.201.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.028 [error] Process #PID<0.202.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.029 [error] Process #PID<0.203.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.034 [error] Process #PID<0.204.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.035 [error] Process #PID<0.205.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.053 [error] Process #PID<0.200.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.078 [error] Process #PID<0.215.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.104 [error] Process #PID<0.210.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.119 [error] Process #PID<0.207.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.126 [error] Process #PID<0.211.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.132 [error] Process #PID<0.196.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.133 [error] Process #PID<0.208.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.147 [error] Process #PID<0.213.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.153 [error] Process #PID<0.197.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.202 [error] Process #PID<0.212.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.206 [error] Process #PID<0.206.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.207 [error] Process #PID<0.209.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:26:43.266 [error] Process #PID<0.214.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+=INFO REPORT==== 3-Jun-2017::11:02:56 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:02:56 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:02:56 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:02:56 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+11:06:31.830 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+
+11:07:19.637 [error] Process #PID<0.165.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+
+11:09:40.326 [error] Process #PID<0.167.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+11:09:40.334 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+11:09:40.334 [info]  Application plug exited: :stopped
+
+11:09:40.335 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 3-Jun-2017::11:09:40 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:09:40 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:09:40 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::11:09:40 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+ok
+
+11:11:37.632 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+11:13:08.411 [error] Process #PID<0.164.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+11:14:06.052 [error] Process #PID<0.166.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+11:14:29.882 [error] Process #PID<0.168.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+
+11:16:00.381 [error] Process #PID<0.169.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:21:34.837 [error] Process #PID<0.171.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:22:35.005 [error] Process #PID<0.179.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.005 [error] Process #PID<0.178.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.005 [error] Process #PID<0.173.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.005 [error] Process #PID<0.177.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.006 [error] Process #PID<0.181.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.006 [error] Process #PID<0.174.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.006 [error] Process #PID<0.172.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.006 [error] Process #PID<0.176.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.007 [error] Process #PID<0.180.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:22:35.018 [error] Process #PID<0.175.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:19:39.361 [error] Process #PID<0.201.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:29:03.302 [error] Process #PID<0.258.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:43:55.518 [error] Process #PID<0.294.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:44:11.001 [error] Process #PID<0.303.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:46:27.618 [error] Process #PID<0.304.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+13:47:04.568 [error] Process #PID<0.333.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:47:27.667 [error] Process #PID<0.309.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.668 [error] Process #PID<0.305.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.668 [error] Process #PID<0.307.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.669 [error] Process #PID<0.306.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.669 [error] Process #PID<0.311.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.670 [error] Process #PID<0.314.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.670 [error] Process #PID<0.308.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.671 [error] Process #PID<0.313.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.671 [error] Process #PID<0.310.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.671 [error] Process #PID<0.315.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:47:27.672 [error] Process #PID<0.312.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:49:03.385 [error] Process #PID<0.334.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+13:53:35.261 [error] Process #PID<0.343.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.262 [error] Process #PID<0.337.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.262 [error] Process #PID<0.342.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.263 [error] Process #PID<0.348.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.264 [error] Process #PID<0.340.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.264 [error] Process #PID<0.344.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.265 [error] Process #PID<0.346.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.266 [error] Process #PID<0.341.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.266 [error] Process #PID<0.336.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.266 [error] Process #PID<0.339.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.267 [error] Process #PID<0.338.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.267 [error] Process #PID<0.345.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.268 [error] Process #PID<0.335.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.268 [error] Process #PID<0.349.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.269 [error] Process #PID<0.347.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:53:35.269 [error] Process #PID<0.352.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+ok
+
+14:15:18.702 [error] Process #PID<0.374.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+14:15:48.298 [error] Process #PID<0.406.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+14:16:18.743 [error] Process #PID<0.380.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.744 [error] Process #PID<0.382.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.744 [error] Process #PID<0.383.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.744 [error] Process #PID<0.386.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.745 [error] Process #PID<0.379.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.745 [error] Process #PID<0.376.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.746 [error] Process #PID<0.384.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.746 [error] Process #PID<0.387.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.746 [error] Process #PID<0.381.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.747 [error] Process #PID<0.378.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.747 [error] Process #PID<0.377.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.747 [error] Process #PID<0.375.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:18.747 [error] Process #PID<0.385.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:16:33.344 [error] Process #PID<0.408.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+14:17:33.397 [error] Process #PID<0.414.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.397 [error] Process #PID<0.413.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.398 [error] Process #PID<0.416.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.398 [error] Process #PID<0.410.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.399 [error] Process #PID<0.411.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.399 [error] Process #PID<0.409.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.400 [error] Process #PID<0.412.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:17:33.401 [error] Process #PID<0.415.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+14:21:26.733 [error] Process #PID<0.437.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+14:28:56.360 [error] Process #PID<0.468.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+16:52:11.117 [error] Process #PID<0.546.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+16:52:11.127 [error] Process #PID<0.553.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.253 [error] Process #PID<0.559.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.278 [error] Process #PID<0.548.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.292 [error] Process #PID<0.563.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.294 [error] Process #PID<0.550.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.296 [error] Process #PID<0.560.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.297 [error] Process #PID<0.561.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.322 [error] Process #PID<0.558.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.387 [error] Process #PID<0.564.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.423 [error] Process #PID<0.549.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.433 [error] Process #PID<0.551.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.460 [error] Process #PID<0.557.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.476 [error] Process #PID<0.554.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.478 [error] Process #PID<0.567.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+16:52:11.490 [error] Process #PID<0.556.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.499 [error] Process #PID<0.555.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.506 [error] Process #PID<0.547.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.507 [error] Process #PID<0.562.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.516 [error] Process #PID<0.565.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.522 [error] Process #PID<0.566.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:52:11.536 [error] Process #PID<0.552.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+ok
+
+16:56:43.457 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+16:56:45.291 [error] Process #PID<0.195.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+16:56:45.299 [error] Process #PID<0.172.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.299 [error] Process #PID<0.178.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.300 [error] Process #PID<0.176.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.300 [error] Process #PID<0.180.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.301 [error] Process #PID<0.179.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.301 [error] Process #PID<0.175.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.301 [error] Process #PID<0.173.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.301 [error] Process #PID<0.181.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.302 [error] Process #PID<0.170.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.302 [error] Process #PID<0.171.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.302 [error] Process #PID<0.165.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.303 [error] Process #PID<0.166.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.303 [error] Process #PID<0.164.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.303 [error] Process #PID<0.169.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.303 [error] Process #PID<0.174.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.304 [error] Process #PID<0.177.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.304 [error] Process #PID<0.182.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.304 [error] Process #PID<0.167.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+16:56:45.314 [error] Process #PID<0.168.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+12:25:09.492 [error] Process #PID<0.780.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+12:25:09.502 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+12:25:09.502 [info]  Application plug exited: :stopped
+
+12:25:09.503 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 4-Jun-2017::12:25:09 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 4-Jun-2017::12:25:09 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 4-Jun-2017::12:25:09 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 4-Jun-2017::12:25:09 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+ok
+ok
+ok
+ok
+ok
+
+12:28:18.843 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+
+12:32:55.317 [error] Process #PID<0.165.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:33:14.200 [error] Process #PID<0.168.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:34:14.244 [error] Process #PID<0.176.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.245 [error] Process #PID<0.174.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.245 [error] Process #PID<0.169.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.246 [error] Process #PID<0.175.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.246 [error] Process #PID<0.172.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.246 [error] Process #PID<0.173.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.246 [error] Process #PID<0.171.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:34:14.288 [error] Process #PID<0.170.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:02.618 [error] Process #PID<0.197.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:21:43.917 [error] Process #PID<0.249.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+
+13:22:04.395 [error] Process #PID<0.251.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:23:29.385 [error] Process #PID<0.252.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:26:18.241 [error] Process #PID<0.282.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:31:36.547 [error] Process #PID<0.312.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:38:09.202 [error] Process #PID<0.316.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+13:40:45.788 [error] Process #PID<0.320.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+
+13:41:09.025 [error] Process #PID<0.322.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+
+13:42:20.045 [error] Process #PID<0.323.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:42:21.763 [error] Process #PID<0.325.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:42:49.562 [error] Process #PID<0.354.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:50:27.898 [error] Process #PID<0.383.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+09:46:14.315 [error] Process #PID<0.1043.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+09:46:14.316 [error] Process #PID<0.1046.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.316 [error] Process #PID<0.1054.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.316 [error] Process #PID<0.1057.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.316 [error] Process #PID<0.1060.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.317 [error] Process #PID<0.1061.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.329 [error] Process #PID<0.1045.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.383 [error] Process #PID<0.1055.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.401 [error] Process #PID<0.1047.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.402 [error] Process #PID<0.1051.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.419 [error] Process #PID<0.1048.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.430 [error] Process #PID<0.1052.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.465 [error] Process #PID<0.1058.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.466 [error] Process #PID<0.1053.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.476 [error] Process #PID<0.1059.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.477 [error] Process #PID<0.1056.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.479 [error] Process #PID<0.1044.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.497 [error] Process #PID<0.1049.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+09:46:14.500 [error] Process #PID<0.1050.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+19:03:01.447 [error] Process #PID<0.16549.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+19:04:01.492 [error] Process #PID<0.16557.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.509 [error] Process #PID<0.16555.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.543 [error] Process #PID<0.16552.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.553 [error] Process #PID<0.16551.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.558 [error] Process #PID<0.16553.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.563 [error] Process #PID<0.16554.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+19:04:01.593 [error] Process #PID<0.16550.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+19:30:42.201 [error] Process #PID<0.20246.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:48:39.533 [error] Process #PID<0.22857.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:50:37.541 [error] Process #PID<0.22875.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:51:50.324 [error] Process #PID<0.22896.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:53:54.516 [error] Process #PID<0.22915.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:54:43.415 [error] Process #PID<0.22936.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:56:04.209 [error] Process #PID<0.22950.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:58:17.558 [error] Process #PID<0.22965.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:59:39.084 [error] Process #PID<0.22984.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+13:21:59.789 [error] Process #PID<0.23003.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+21:19:25.378 [error] Process #PID<0.24266.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+21:20:21.251 [error] Process #PID<0.24283.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:43:11.879 [error] Process #PID<0.26458.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+11:43:11.985 [error] Process #PID<0.26462.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.013 [error] Process #PID<0.26467.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.035 [error] Process #PID<0.26466.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.057 [error] Process #PID<0.26476.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.064 [error] Process #PID<0.26470.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.071 [error] Process #PID<0.26477.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.078 [error] Process #PID<0.26472.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.094 [error] Process #PID<0.26463.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.111 [error] Process #PID<0.26468.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.118 [error] Process #PID<0.26460.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.124 [error] Process #PID<0.26461.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.131 [error] Process #PID<0.26459.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.137 [error] Process #PID<0.26479.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+11:43:12.140 [error] Process #PID<0.26475.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.158 [error] Process #PID<0.26474.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.158 [error] Process #PID<0.26464.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.178 [error] Process #PID<0.26469.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.179 [error] Process #PID<0.26471.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.179 [error] Process #PID<0.26473.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.208 [error] Process #PID<0.26465.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:43:12.219 [error] Process #PID<0.26478.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+13:13:27.935 [error] Process #PID<0.26715.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+13:14:28.466 [error] Process #PID<0.26722.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.467 [error] Process #PID<0.26726.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.467 [error] Process #PID<0.26727.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.467 [error] Process #PID<0.26730.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.468 [error] Process #PID<0.26728.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+13:14:28.468 [error] Process #PID<0.26725.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.468 [error] Process #PID<0.26717.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.468 [error] Process #PID<0.26719.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.468 [error] Process #PID<0.26721.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.469 [error] Process #PID<0.26724.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.469 [error] Process #PID<0.26718.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.469 [error] Process #PID<0.26723.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.469 [error] Process #PID<0.26720.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:28.469 [error] Process #PID<0.26716.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+13:14:54.394 [error] Process #PID<0.26753.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+13:14:54.424 [error] Process #PID<0.26758.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.425 [error] Process #PID<0.26754.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.425 [error] Process #PID<0.26756.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.426 [error] Process #PID<0.26761.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.426 [error] Process #PID<0.26757.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.426 [error] Process #PID<0.26764.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.427 [error] Process #PID<0.26760.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.427 [error] Process #PID<0.26765.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.427 [error] Process #PID<0.26763.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.427 [error] Process #PID<0.26768.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+13:14:54.427 [error] Process #PID<0.26759.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.428 [error] Process #PID<0.26769.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.428 [error] Process #PID<0.26762.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.428 [error] Process #PID<0.26755.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:14:54.428 [error] Process #PID<0.26766.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+11:52:07.614 [error] Process #PID<0.416.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+11:52:07.615 [error] Process #PID<0.30179.0> raised an exception
+** (Socket.Error) invalid argument
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:52:07.615 [error] Process #PID<0.30184.0> raised an exception
+** (Socket.Error) invalid argument
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:52:07.615 [error] Process #PID<0.30182.0> raised an exception
+** (Socket.Error) invalid argument
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+11:52:07.616 [error] Process #PID<0.30181.0> raised an exception
+** (Socket.Error) invalid argument
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+=INFO REPORT==== 13-Jun-2017::11:52:07 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:52:07 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:52:07 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:52:07 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 13-Jun-2017::11:53:06 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:53:06 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:53:06 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jun-2017::11:53:06 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+11:57:21.566 [error] Process #PID<0.163.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:57:55.063 [error] Process #PID<0.179.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:58:15.342 [error] Process #PID<0.193.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:00:07.300 [error] Process #PID<0.207.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+12:01:33.698 [error] Process #PID<0.222.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+18:22:50.774 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+18:22:51.121 [error] Process #PID<0.175.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.121 [error] Process #PID<0.178.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.122 [error] Process #PID<0.174.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.124 [error] Process #PID<0.181.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.125 [error] Process #PID<0.177.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.126 [error] Process #PID<0.180.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.127 [error] Process #PID<0.179.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.171 [error] Process #PID<0.170.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.182 [error] Process #PID<0.166.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.183 [error] Process #PID<0.167.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.183 [error] Process #PID<0.165.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.194 [error] Process #PID<0.164.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.194 [error] Process #PID<0.173.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.195 [error] Process #PID<0.171.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.203 [error] Process #PID<0.176.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.203 [error] Process #PID<0.168.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.212 [error] Process #PID<0.169.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.251 [error] Process #PID<0.172.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+18:22:51.253 [error] Process #PID<0.182.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+18:42:07.538 [error] Process #PID<0.204.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+18:42:27.012 [error] Process #PID<0.220.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+18:43:00.795 [error] Process #PID<0.236.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+18:43:00.799 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+18:43:00.800 [info]  Application plug exited: :stopped
+
+18:43:00.800 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 15-Jun-2017::18:43:00 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jun-2017::18:43:00 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jun-2017::18:43:00 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jun-2017::18:43:00 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+18:57:42.946 [error] Process #PID<0.168.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+19:04:44.946 [error] Process #PID<0.183.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+
+19:04:53.591 [error] Process #PID<0.199.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+19:18:48.886 [error] Process #PID<0.200.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+18:46:16.154 [error] Process #PID<0.11723.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+18:46:46.461 [error] Process #PID<0.11743.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+09:25:26.125 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+09:25:26.127 [info]  Application plug exited: :stopped
+
+09:25:26.127 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 20-Jun-2017::09:25:26 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:26 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:26 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:26 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 20-Jun-2017::09:25:28 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:28 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:28 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 20-Jun-2017::09:25:28 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+12:32:44.848 [error] Process #PID<0.1351.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+12:32:44.848 [error] Process #PID<0.1365.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.848 [error] Process #PID<0.1368.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.848 [error] Process #PID<0.1367.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.849 [error] Process #PID<0.1370.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.849 [error] Process #PID<0.1358.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.850 [error] Process #PID<0.1355.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.850 [error] Process #PID<0.1364.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.850 [error] Process #PID<0.1362.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.851 [error] Process #PID<0.1361.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.851 [error] Process #PID<0.1363.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.851 [error] Process #PID<0.1359.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.852 [error] Process #PID<0.1360.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.852 [error] Process #PID<0.1353.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.852 [error] Process #PID<0.1366.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.853 [error] Process #PID<0.1356.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.853 [error] Process #PID<0.1371.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.853 [error] Process #PID<0.1357.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.854 [error] Process #PID<0.1369.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.854 [error] Process #PID<0.1372.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+12:32:44.854 [error] Process #PID<0.1354.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+09:40:51.484 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+09:40:51.484 [error] Process #PID<0.26152.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+09:40:51.485 [info]  Application plug exited: :stopped
+
+09:40:51.485 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 28-Jun-2017::09:40:51 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:40:51 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:40:51 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:40:51 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+09:41:44.008 [error] Process #PID<0.162.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:42:28.177 [error] Process #PID<0.195.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:42:55.277 [error] Process #PID<0.227.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:43:12.779 [error] Process #PID<0.260.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:43:43.793 [error] Process #PID<0.291.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:44:52.964 [error] Process #PID<0.322.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:45:57.856 [error] Process #PID<0.353.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:46:23.585 [error] Process #PID<0.385.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :abnormal, nil}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+=INFO REPORT==== 28-Jun-2017::09:46:23 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:46:23 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:46:23 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 28-Jun-2017::09:46:23 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+09:59:42.545 [error] Process #PID<0.163.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+10:00:10.954 [error] Process #PID<0.170.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+ok
+
+10:03:23.275 [error] Process #PID<0.171.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+10:08:11.234 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+10:08:11.235 [info]  Application plug exited: :stopped
+
+10:08:11.235 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 2-Jul-2017::10:08:11 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 2-Jul-2017::10:08:11 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 2-Jul-2017::10:08:11 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 2-Jul-2017::10:08:11 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 5-Jul-2017::18:55:05 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 5-Jul-2017::18:55:05 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 5-Jul-2017::18:55:05 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 5-Jul-2017::18:55:05 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+09:48:00.667 [error] Process #PID<0.3114.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:48:35.114 [error] Process #PID<0.3144.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:49:25.860 [error] Process #PID<0.3175.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+09:49:49.966 [error] Process #PID<0.3207.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+10:21:02.958 [error] Process #PID<0.3236.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+11:20:19.449 [error] Process #PID<0.3342.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+13:47:33.209 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+13:47:33.210 [info]  Application plug exited: :stopped
+
+13:47:33.210 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 10-Jul-2017::13:47:33 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 10-Jul-2017::13:47:33 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 10-Jul-2017::13:47:33 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 10-Jul-2017::13:47:33 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+ok
+
+13:21:17.621 [error] Process #PID<0.868.0> raised an exception
+** (CaseClauseError) no case clause matching: {:close, :going_away, ""}
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+13:21:17.622 [error] Process #PID<0.884.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.622 [error] Process #PID<0.873.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.622 [error] Process #PID<0.887.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.622 [error] Process #PID<0.881.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.622 [error] Process #PID<0.878.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.623 [error] Process #PID<0.892.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.623 [error] Process #PID<0.875.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.623 [error] Process #PID<0.870.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.624 [error] Process #PID<0.871.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.624 [error] Process #PID<0.874.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.624 [error] Process #PID<0.883.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.624 [error] Process #PID<0.877.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.625 [error] Process #PID<0.889.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.625 [error] Process #PID<0.886.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.626 [error] Process #PID<0.872.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.626 [error] Process #PID<0.882.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.627 [error] Process #PID<0.879.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.627 [error] Process #PID<0.876.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.627 [error] Process #PID<0.885.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.628 [error] Process #PID<0.888.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.628 [error] Process #PID<0.890.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+13:21:17.628 [error] Process #PID<0.891.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+13:21:17.628 [error] Process #PID<0.880.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+ok
+
+20:29:50.083 [error] Process #PID<0.5519.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+20:30:10.158 [error] Process #PID<0.5547.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+20:30:45.801 [error] Process #PID<0.5572.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+20:31:42.687 [error] Process #PID<0.5573.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:31:42.687 [error] Process #PID<0.5576.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+20:31:42.687 [error] Process #PID<0.5574.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:31:42.688 [error] Process #PID<0.5578.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+20:31:42.688 [error] Process #PID<0.5577.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:31:42.689 [error] Process #PID<0.5575.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:31:45.770 [error] Process #PID<0.5599.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+20:32:08.867 [error] Process #PID<0.5627.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+ok
+
+20:32:30.129 [error] Process #PID<0.5652.0> raised an exception
+** (CaseClauseError) no case clause matching: :close
+    (ticket) lib/ticket_socket.ex:24: TicketSocket.getMsg/1
+
+20:32:43.012 [error] Process #PID<0.5604.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:32:43.013 [error] Process #PID<0.5603.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+20:32:43.013 [error] Process #PID<0.5601.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:32:43.013 [error] Process #PID<0.5600.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:32:43.013 [error] Process #PID<0.5602.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.773 [error] Process #PID<0.5630.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.774 [error] Process #PID<0.5629.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.774 [error] Process #PID<0.5631.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.774 [error] Process #PID<0.5634.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+20:33:07.774 [error] Process #PID<0.5628.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.774 [error] Process #PID<0.5632.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:07.775 [error] Process #PID<0.5633.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.507 [error] Process #PID<0.5657.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.507 [error] Process #PID<0.5665.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.508 [error] Process #PID<0.5655.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.509 [error] Process #PID<0.5663.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:127: Main.mainLoop/7
+
+20:33:27.509 [error] Process #PID<0.5656.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.509 [error] Process #PID<0.5654.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.510 [error] Process #PID<0.5658.0> raised an exception
+** (Socket.Error) socket is not connected
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+20:33:27.510 [error] Process #PID<0.5653.0> raised an exception
+** (Socket.Error) TLS connection is closed
+    lib/socket/web.ex:839: Socket.Web.send!/3
+    (ticket) lib/Module/main.ex:108: Main.mainLoop/7
+
+07:48:21.723 [info]  Application ticket exited: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (CaseClauseError) no case clause matching: nil
+            lib/socket/web.ex:422: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+07:48:21.724 [info]  Application plug exited: :stopped
+
+07:48:21.724 [info]  Application mime exited: :stopped
+
+=INFO REPORT==== 13-Jul-2017::07:48:21 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::07:48:21 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::07:48:21 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::07:48:21 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (CaseClauseError) no case clause matching: nil
+            lib/socket/web.ex:422: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 13-Jul-2017::08:38:41 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::08:38:41 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::08:38:41 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::08:38:41 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (CaseClauseError) no case clause matching: {:http_error, <<22, 3, 1, 0, 242, 1, 0, 0, 238, 3, 3, 89, 102, 193, 52, 151, 155, 206, 126, 235, 229, 113, 90, 68, 132, 103, 148, 203, 78, 81, 63, 204, 211, 253, 131, 128, 159, 16, 25, 207, 203, 26, 213, 0, 0, 132, 192, 48, 192, ...>>}
+            lib/socket/web.ex:422: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 13-Jul-2017::17:02:29 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::17:02:29 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::17:02:29 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::17:02:29 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 13-Jul-2017::19:04:14 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:14 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:14 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:14 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 13-Jul-2017::19:04:25 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:25 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:25 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 13-Jul-2017::19:04:25 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (CaseClauseError) no case clause matching: nil
+            lib/socket/web.ex:422: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 14-Jul-2017::20:07:38 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 14-Jul-2017::20:07:38 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 14-Jul-2017::20:07:38 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 14-Jul-2017::20:07:38 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+
+=INFO REPORT==== 15-Jul-2017::23:15:27 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jul-2017::23:15:27 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jul-2017::23:15:27 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 15-Jul-2017::23:15:27 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (RuntimeError) malformed upgrade request
+            lib/socket/web.ex:432: Socket.Web.accept!/2
+            (ticket) lib/ticket_socket.ex:12: TicketSocket.listen/1
+            (kernel) application_master.erl:273: :application_master.start_it_old/4
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found
+/bin/elixir: line 126: exec: erl: not found

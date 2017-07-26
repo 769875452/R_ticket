@@ -1,0 +1,27 @@
+
+=INFO REPORT==== 3-Jun-2017::09:21:59 ===
+    application: logger
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::09:21:59 ===
+    application: cowboy
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::09:21:59 ===
+    application: cowlib
+    exited: stopped
+    type: temporary
+
+=INFO REPORT==== 3-Jun-2017::09:21:59 ===
+    application: ranch
+    exited: stopped
+    type: temporary
+** (Mix) Could not start application ticket: exited in: TicketSocket.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (Socket.Error) address already in use
+            lib/socket/tcp.ex:171: Socket.TCP.listen!/2
+            lib/socket/web.ex:376: Socket.Web.listen!/2
+            (ticket) lib/ticket_socket.ex:7: TicketSocket.start/2
+            (kernel) application_master.erl:273: :application_master.start_it_old/4

@@ -1,0 +1,59 @@
+.check-title{
+    font-size: 14px;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.modal-result{
+    max-height: 600px;
+    overflow: auto;
+}
+.select-row{
+    padding-left: 20px;
+    width: 190px;
+    display: inline-block;
+}
+
+.select-row.small{
+    width: auto;
+}
+.checkbox-not-in-numbers .checkbox-inline:first-child{
+    margin-left: 10px;
+}
+.radio-inline-continuity .radio-inline:first-child{
+    margin-left: 10px;
+}
+.radio-numbers .radio-inline:first-child{
+    margin-left: 10px;
+}
+.flex-group{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.flex-group-title{
+    flex: 0 0 auto;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.check-start{
+    margin-left: 10px;
+}
+.filter-result{
+    margin: 10px;
+    display: none;
+}
+.haveNumber,.mustHave{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.ticket-page{
+    height:30px;
+    line-height: 30px;
+    background: #ccc;
+}
+.checkbox-paragraph .check-paragraph{
+    margin-top:5px;
+}
