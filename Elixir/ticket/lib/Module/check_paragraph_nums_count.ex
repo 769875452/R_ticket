@@ -5,7 +5,7 @@ defmodule CheckParagraphNumsCount do
     num>=startNum && num <=endNum
   end
 
-  def nextCheckInRange(_,_,maxCount,_,count) when count >=maxCount do
+  def nextCheckInRange(_,_,_,maxCount,_,count) when count >maxCount do
     false
   end
 
@@ -13,28 +13,36 @@ defmodule CheckParagraphNumsCount do
 #    true
 #  end
 
-  def nextCheckInRange(_,_,_,tlNums,_) when tlNums==[]  do
+
+  def nextCheckInRange(_,_,minCount,_,tlNums,count) when (tlNums==[] and is_nil(minCount))  do
     true
+  end
+  def nextCheckInRange(_,_,minCount,_,tlNums,count) when tlNums==[]  do
+    if count>=minCount do
+      true
+      else
+      false
+    end
   end
 
 
-    def nextCheckInRange(startNum,endNum,maxCount,tlNums,count) do
+    def nextCheckInRange(startNum,endNum,minCount,maxCount,tlNums,count) do
     count=
         if checkIsInRange (hd tlNums),startNum,endNum do
             count+1
         else
             count
         end
-        nextCheckInRange startNum,endNum,maxCount,(tl tlNums),count;
+        nextCheckInRange startNum,endNum,minCount,maxCount,(tl tlNums),count;
     end
 
 
-  def checkParagraphNumsCount(_,_,maxCount) when maxCount==nil do
+  def checkParagraphNumsCount(_,_,minCount,maxCount) when (is_nil(minCount) and is_nil(maxCount==nil)) do
     true
   end
-  def checkParagraphNumsCount(nums,start,maxCount) do
+  def checkParagraphNumsCount(nums,start,minCount,maxCount) do
 	startNum=start*10+1;
     endNum=(start+1)*10;
-    nextCheckInRange startNum,endNum,maxCount,nums,0
+    nextCheckInRange startNum,endNum,minCount,maxCount,nums,0
   end
 end

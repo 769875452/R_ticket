@@ -2,24 +2,15 @@ defmodule CheckInclude do
   @moduledoc false
 
 
-<<<<<<< HEAD
-  def checkIsInclude(_,_,count,maxCount) when count>=maxCount do
-=======
   def checkIsInclude(_,_,count,maxCount,_) when count>=maxCount do
-    IO.puts "check is include false"
->>>>>>> origin/master
     false
   end
 
   def checkIsInclude(_,checkNums,_,_,atLeast) when checkNums == [] do
-<<<<<<< HEAD
-  if(!atLeast) do
-=======
-    atLeast
->>>>>>> origin/master
+	atLeast
   end
 
-  def checkIsInclude(nums,_,_,_,atLeast) when nums == [] do
+ def checkIsInclude(nums,_,_,_,atLeast) when nums == [] do
     atLeast
   end
 

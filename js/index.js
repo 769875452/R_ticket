@@ -6,8 +6,9 @@ var allNumsLength=1;
 var isContinue=false;
 var getdataTimer=0;
 var websocket=null;
+var validNumsArrBk=[];
 function connectWS(){
- websocket = new WebSocket("ws://106.184.5.171:8082/");
+    websocket = new WebSocket("ws://43.239.159.229:8082/");
 //    websocket = new WebSocket("ws://192.168.3.30:8082/");
     websocket.onopen = function(evt) {
         console.log("websocket success")
@@ -17,17 +18,23 @@ function connectWS(){
         console.log("websocket fail")
     };
     websocket.onmessage = function(evt) {
-        if(evt.data != "false"){
-            validNumsArr=validNumsArr.concat(JSON.parse(evt.data));
-            allNumsLength=allNumsLength-1000
+        validNumsArr=validNumsArr.concat(JSON.parse(evt.data));
+        if(validNumsArrBk.length>0){
+            getdata();
+            handleCheckStart();
+            validNumsArrBk=validNumsArrBk.filter((num,i)=>{
+                return i>3000;
+            })
+            allNumsLength=validNumsArrBk.length;
+        }else{
+            allNumsLength=(allNumsLength>3000?(allNumsLength-3000):0)
         }
-
-
     };
     websocket.onerror = function(evt) {
         console.log("websocket error",evt.data);
         isContinue=false;
-        alert("·þÎñÆ÷´íÎó")
+        alert("æœåŠ¡å™¨å¼‚å¸¸,è¯·å°è¯•åˆ·æ–°é¡µé¢é‡æ–°è¿žæŽ¥")
+        $.get("http://43.239.159.229:8083/restartTicket")
     };
 }
 handleCheckStart=()=>{
@@ -35,7 +42,7 @@ handleCheckStart=()=>{
     getdataTimer=window.setInterval(()=>{
         getdata()
     },1000)
-    let excludeNums=[]
+    let excludeNums=[];
     $('input[name="notInNums"]:checked').each(function(){
         excludeNums.push(parseInt($(this).val()));
     });
@@ -44,10 +51,10 @@ handleCheckStart=()=>{
         let notIncludeNum=notInNumsValue[1];
         for(let i=0;i<4;i++){
             let thisNum=(i*10)+parseInt(notIncludeNum);
-            excludeNums.filter((num)=>{
+            excludeNums=excludeNums.filter((num)=>{
                 return num!=(thisNum)
             })
-            excludeNums.push(thisNum);
+            thisNum!=0 && excludeNums.push(thisNum);
         }
         excludeNums=excludeNums.sort((a,b)=>{
             return a-b;
@@ -83,17 +90,20 @@ handleCheckStart=()=>{
     for(let sameLength in checkNumsMap){
         option["laskNumberCheckNums"+sameLength]=checkNumsMap[sameLength];
     }
-    $(".check-paragraph:checked").each(function(){
-        let paragraphValue=$(this).val().split("-");
-        let startValue=parseInt(paragraphValue[0]);
-        let paragraphLength=parseInt(paragraphValue[1]);
-        option["paragraphCount"+startValue]=paragraphLength
+    $(".check-paragraph").each(function(){
+        if($(this).val()!=""){
+            let paragraphValue=$(this).attr("name").split("_");
+            let startValue=parseInt(paragraphValue[1]);
+            let paragraphLength=parseInt($(this).val());
+            let startOrEndString=paragraphValue[2]
+            option["paragraphCount"+startValue+startOrEndString]=paragraphLength
+        }
     })
     if($("#largerThan").val()){
-        option.min=parseInt($("#largerThan").val())
+        option.max=parseInt($("#largerThan").val())
     }
     if($("#smallerThan").val()){
-        option.max=parseInt($("#smallerThan").val())
+        option.min=parseInt($("#smallerThan").val())
     }
     if($("input[name='simpleNums']:checked").val()){
         let checkNumsArr=$("#inputSelectNumber").val().split(",");
@@ -110,7 +120,7 @@ handleCheckStart=()=>{
         option.isAtLeast=true
     }
     allNums=[];
-    for(let i=1,j=0;i<=38;i++){
+    for(let i=1,j=0;i<38;i++){
 
         if(excludeNums.length>j && excludeNums[j]==i){
             j++;
@@ -119,15 +129,32 @@ handleCheckStart=()=>{
         }
     }
 
-    allNumsLength=1;
-    for(let i=0;i<checkNumsLength;i++){
-        allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
+
+
+    if(validNumsArrBk.length>0){
+        option.allNumsArray=validNumsArrBk.filter((num,i)=>{
+            return i<3000;
+        });
+    }else{
+        allNumsLength=1;
+        for(let i=0;i<checkNumsLength && (allNums.length-i)>7;i++){
+            allNumsLength=allNumsLength*(allNums.length-i)/(i+1);
+        }
     }
-    console.log("allNumsLength",allNumsLength)
-    console.log(option)
+    if($("input[name='checkNumers']:checked").val()){
+        checkNumsLength=parseInt($("input[name='checkNumers']:checked").val());
+        option.checkNumsLength=(checkNumsLength-1);
+    }else{
+        option.checkNumsLength=6;
+    }
+
     websocket.send(JSON.stringify(option))
 
-    checkNumsLength=7;
+
+    console.log("allNums",allNums)
+    console.log("allNumsLength",allNumsLength)
+    console.log(option)
+
 
     let numsArr=[];
     for(let i=0;i<checkNumsLength;i++){

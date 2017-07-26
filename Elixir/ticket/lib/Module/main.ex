@@ -4,53 +4,46 @@ defmodule Main do
   @checkNumsLength 6
   @result []
 
-
   def main(option,client) do
     allNums=setNumToAll([],option["excludeNums"],1)
+    if(is_nil(option["allNumsArray"]))do
     startNewLoop(allNums,option,client)
+    else
+    loopByArray(option["allNumsArray"],option,client,[],0)
+    end
+
   end
 
-  def main do
+def main do
     excludeNums=[]
     allNums=setNumToAll([],excludeNums,1)
-#    checkNums=(getStartNums allNums,@checkNumsLength,[],1)
-
-#    startNewLoop(allNums)
-
-#    result=mainLoop(checkNums,[],allNums)
-#    IO.puts "result-------------------"
-#    for nums<-result do
-#        iOPUTLIST nums
-#    end
-#    IO.puts "result++++++++++"
-#    result
   end
 
 
-  def startNewLoop(allNums,tlNums,option,client) when tlNums==[] do
+  def startNewLoop(_,tlNums,_,_,_) when tlNums==[] do
     false
   end
 
-  def startNewLoop(allNums,tlNums,option,client) when (length tlNums) <= @checkNumsLength do
+  def startNewLoop(_,tlNums,_,_,maxLength) when (length tlNums) <= maxLength do
     false
   end
 
-  def startNewLoop(allNums,tlNums,option,client) do
+  def startNewLoop(allNums,tlNums,option,client,maxLength) do
 
     spawn(
         fn ->
-            mainLoop (getStartNums (tl tlNums),[],1),[],allNums,(hd tlNums),option,client,0
+            mainLoop (getStartNums (tl tlNums),[],1, option["checkNumsLength"] ),[],allNums,(hd tlNums),option,client,0
          end
      )
-     startNewLoop allNums,(tl tlNums),option,client
+     startNewLoop allNums,(tl tlNums),option,client,maxLength
   end
   def startNewLoop(allNums,option,client) do
     spawn(
         fn ->
-         mainLoop (getStartNums (tl allNums),[],1),[],allNums,(hd allNums),option,client,0
+         mainLoop (getStartNums (tl allNums),[],1, option["checkNumsLength"] ),[],allNums,(hd allNums),option,client,0
          end
      )
-     startNewLoop allNums,(tl allNums),option,client
+     startNewLoop allNums,(tl allNums),option,client,option["checkNumsLength"]
   end
 
 
@@ -60,12 +53,43 @@ defmodule Main do
       EvenLength.checkIsEvenOverLength(checkNums,option["evenNumbresCheckValue"]) &&
       CheckLastNum.checkLastNum(checkNums,2,option["laskNumberCheckNums2"]) &&
       CheckLastNum.checkLastNum(checkNums,3,option["laskNumberCheckNums3"]) &&
-      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,0,option["paragraphCount0"]) &&
-      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,1,option["paragraphCount1"]) &&
-      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2"]) &&
-      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,0,option["paragraphCount0start"],option["paragraphCount0end"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,1,option["paragraphCount1start"],option["paragraphCount1end"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,2,option["paragraphCount2start"],option["paragraphCount2end"]) &&
+      CheckParagraphNumsCount.checkParagraphNumsCount(checkNums,3,option["paragraphCount3start"],option["paragraphCount3end"]) &&
       SumCheck.sumCheck(checkNums,option["min"],option["max"]) &&
       CheckInclude.checkInclude(checkNums,option["includeNums"],option["includeLength"],option["isAtLeast"])
+  end
+
+    def loopByArray(allNumsArr,_,client,result,_) when allNumsArr==[] do
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
+  end
+
+  def loopByArray(allNumsArr,option,client,result,resultLength) do
+    result=
+    if(checkLoop((hd allNumsArr),option)) do
+        result ++ [hd allNumsArr]
+        else
+        result
+    end
+
+    resultLength=
+    if(resultLength == 3000) do
+        {status, jsonResult} = JSON.encode(result)
+         client |> Socket.Web.send! ({ :text, jsonResult })
+        0
+        else
+        resultLength+1
+    end
+    result=
+    if(resultLength == 0) do
+        []
+        else
+        result
+    end
+    loopByArray((tl allNumsArr),option,client,result,resultLength)
+
   end
 
   def mainLoop(checkNums,result,allNums,staticNum,option,client,resultLength) do
@@ -77,6 +101,7 @@ defmodule Main do
         else
         result
     end
+
     resultLength=
     if(resultLength == 3000) do
         {status, jsonResult} = JSON.encode(result)
@@ -92,8 +117,6 @@ defmodule Main do
         else
         result
     end
-#    IO.puts resultLength
-#     IO.puts lengtsh result
      nextNums=getNextNums(checkNums,allNums,true)
      result=
      if (nextNums)!=false do
@@ -102,6 +125,7 @@ defmodule Main do
 #        iOPUTLIST @result
         {status, jsonResult} = JSON.encode(result)
          client |> Socket.Web.send! ({ :text, jsonResult })
+
        result
      end
      result
@@ -191,16 +215,16 @@ defmodule Main do
 
 
 
-  def getStartNums(tlAllNums,nums,nowLength) when tlAllNums==[] do
+  def getStartNums(tlAllNums,nums,nowLength,_) when tlAllNums==[] do
     nums
   end
 
-  def getStartNums(tlAllNums,nums,nowLength) when nowLength>@checkNumsLength do
+  def getStartNums(_,nums,nowLength,maxLength) when nowLength>maxLength do
     nums
   end
 
-  def getStartNums(allNums,nums,nowLength) do
-    getStartNums (tl allNums),[(hd allNums)]++nums,nowLength+1
+  def getStartNums(allNums,nums,nowLength,maxLength) do
+    getStartNums (tl allNums),[(hd allNums)]++nums,nowLength+1,maxLength
   end
 
 
@@ -215,7 +239,7 @@ defmodule Main do
 
 
 
-  def setNumToAll(allNums,excludeNums,now) when now >37 do
+  def setNumToAll(allNums,_,now) when now >37 do
     allNums
   end
 

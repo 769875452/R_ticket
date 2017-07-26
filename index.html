@@ -18,8 +18,17 @@
 	<script src="./js/R_ticket.js"></script>
 </head>
 <body>
-<div class="check-title"> 筛选数量(不选的话默认为5)</div>
+<div class="check-title"> 筛选数量(不选的话默认为7)</div>
 <div class="radio-numbers">
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="2"> 37选2
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="3"> 37选3
+	</label>
+	<label class="radio-inline">
+		<input type="radio" name="checkNumers" value="4"> 37选4
+	</label>
 	<label class="radio-inline">
 		<input type="radio" name="checkNumers" value="5"> 37选5
 	</label>
@@ -81,14 +90,18 @@
 
 </div>
 
-<!--<div class="filter-result">-->
-	<!--已筛选出<span class="filter-result-length"></span>个-->
-
-<!--</div>-->
+<div class="filter-result">
+	已筛选出<span class="filter-result-length">0</span>个
+</div>
 
 <button type="button" class="check-start btn btn-primary btn-default">
-	筛选结果
+	筛选结果(未清除则根据结果进行筛选)
 </button>
+
+<button type="button" class="check-clear btn btn-warning btn-default">
+	清除当前数据
+</button>
+
 <button type="button" class="check-stop btn btn-danger btn-default" >
 	停止筛选
 </button>
@@ -114,6 +127,11 @@
 			</div>
 			<div class="modal-footer">
 				<!--<button type="button" class="btn btn-default btn-continue" disabled> 继续筛选</button>-->
+
+				<button type="button" class="check-clear btn btn-warning btn-default">
+					清除当前数据
+				</button>
+
 				<button type="button" class="check-stop btn btn-danger btn-default" >
 					停止筛选
 				</button>
@@ -149,9 +167,10 @@
 	$(".check-start").click(function(){
 		pageobj.pagenum=1;
 		isContinue=true;
-		$(".result-table").html("");
-//		$(".filter-result").show();
+		validNumsArrBk=validNumsArr.concat([]);
 		validNumsArr=[];
+		$(".result-table").html("");
+		$(".filter-result").show();
 		websocket && websocket.close()
 		connectWS();
 		$("#numsResult").modal();
@@ -162,6 +181,10 @@
 	$(".check-stop").click(function(){
 		websocket.close()
 		isContinue=false;
+		getdata();
+	})
+	$(".check-clear").click(function(){
+		validNumsArr=[];
 		getdata();
 	})
 
@@ -212,15 +235,10 @@
 				' ' +(10*i+1)+'-'+(10*(i+1))+'含有号码(个)的排除'+
 				'</label>';
 		$(".checkbox-paragraph").append(paragraphGroupDiv);
-		for(var j=1;j<=7;j++){
-			if((i*10+j)>37){
-				break;
-			}
-			let paragraphNumsCheckbox='<label class="radio-inline"> ' +
-					'<input type="radio" class="check-paragraph" name="paragraphNums_'+i+'" value="'+i+'-'+j+'">  ' +j+
-					'</label>';
+			let paragraphNumsCheckbox='<input type="text" class="check-paragraph" name="paragraphNums_'+i+'_start" >  ' +
+					'到' +
+					'<input type="text" class="check-paragraph" name="paragraphNums_'+i+'_end" >  个之间'
 			$(".checkbox-paragraph").append(paragraphNumsCheckbox);
-		}
 		$(".checkbox-paragraph").append("<br>")
 	}
 	//独立号码筛选
@@ -251,6 +269,7 @@
 	pageobj.perpage=50;
 	function getdata(){
 		$(".result-table").html("");
+		$(".filter-result-length").html(validNumsArr.length);
 		$(".filter-result-have").html(allNumsLength)
 		let validNumsArrLen=validNumsArr.length
 		$("#numsLength").html(validNumsArrLen);
